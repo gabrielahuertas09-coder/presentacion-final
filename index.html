@@ -30,10 +30,15 @@
                     <div style="text-align: left;">
                         <h2 class="mb-2">01. Pitch</h2>
                         <p style="text-align: left; margin: 0 0 2rem;">Conoce el pitch, los objetivos del proyecto y el análisis que fundamenta la creación de Ecos de Palenque como plataforma de visibilización cultural.</p>
-                        <a href="pitch/" target="_blank" class="btn-pill outline">📖 Ver Pitch Interactivo</a>
+                        <a href="pitch/index.html" target="_blank" class="btn-pill outline">📖 Ver Pitch Interactivo</a>
                     </div>
                     <div class="text-center">
-                        <img src="imagenes/pitch.png" alt="Pitch Cover" class="rounded-img" style="max-height: 60vh; width: 100%;">
+                        <div style="position: relative; display: inline-block;">
+                            <img src="imagenes/pitch%20(1).png" alt="Pitch Cover" class="rounded-img" style="max-height: 80vh; width: 100%;">
+                            <div style="position: absolute; bottom: 20px; right: -30px; z-index: 10;">
+                                <button class="btn-pill" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); width: 160px;" onclick="openModal('imagenes/pitch%20(1).png')">🔍 Visualizar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -335,6 +340,30 @@
                 </section>
             </section>
 
+            <!-- 07. Paleta de Color -->
+            <section class="section-premium bg-amarillo-soft" data-state="step-7">
+                <div class="grid-2">
+                    <div style="text-align: left;">
+                        <h2 class="mb-2">07. Paleta de Color</h2>
+                        <h3 class="terracotta-text">Vibrancia y Raíces</h3>
+                        <p style="text-align: left; margin: 0 0 2rem;">Nuestra paleta de colores, denominada <strong>"Luz Cítrica"</strong>, captura la esencia del sol caribeño y la profundidad de la tradición palenquera. Una combinación equilibrada que transmite energía, historia y autenticidad.</p>
+                        <div class="technical-sheet-premium" style="font-size: 0.9em; padding: 1.5rem;">
+                            <p style="margin-bottom: 0.5rem;">• <strong>Amarillo Vital:</strong> Simboliza la alegría y el sol.</p>
+                            <p style="margin-bottom: 0.5rem;">• <strong>Verde Terracota:</strong> Representa la tierra y las raíces.</p>
+                            <p style="margin-bottom: 0;">• <strong>Negro Cítrico:</strong> Aporta elegancia y profundidad.</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div style="position: relative; display: inline-block;">
+                            <img src="imagenes/PALETAS%20DE%20COLORES.png" alt="Paleta de Color" class="rounded-img" style="max-height: 90vh; width: auto; border: 4px solid white; background: white; padding: 1rem;">
+                            <div style="position: absolute; bottom: 20px; right: -30px; z-index: 10;">
+                                <button class="btn-pill" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); width: 160px;" onclick="openModal('imagenes/PALETAS%20DE%20COLORES.png')">🔍 Visualizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- 08. Página Web -->
             <section class="section-premium bg-crema" data-state="step-8">
                 <div class="grid-2">
@@ -345,7 +374,12 @@
                         <a href="2/index.html" target="_blank" class="btn-pill outline">🌐 Explorar Sitio Web</a>
                     </div>
                     <div class="text-center">
-                        <img src="imagenes/pagina.png" alt="Web Preview" class="rounded-img" style="max-height: 60vh; width: 100%; border: 4px solid white;">
+                        <div style="position: relative; display: inline-block;">
+                            <img src="imagenes/sitio%20web.png" alt="Web Preview" class="rounded-img" style="border: 4px solid white;">
+                            <div style="position: absolute; bottom: 20px; right: -30px; z-index: 10;">
+                                <button class="btn-pill" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); width: 160px;" onclick="openModal('imagenes/sitio%20web.png')">🔍 Visualizar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -412,14 +446,6 @@
 
         const empaqueImages = [
             'imagenes/empaques/em1.png', 'imagenes/empaques/em2.png'
-        ];
-
-        const visualizacion1Images = [
-            'imagenes/moodboard_Mesa de trabajo 1_Mesa de trabajo 1.png', 
-            'imagenes/modboard.png',
-            'imagenes/portada.png',
-            'imagenes/empaques/em1.png', 
-            'imagenes/empaques/em2.png'
         ];
 
         const composicionImages = [
