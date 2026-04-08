@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades - ECOS DE PALENQUE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="javascript.js" defer></script>
+</head>
+
+<body>
+    <!-- PANEL LATERAL (VENTANA AZUL) -->
+    <div class="panel" id="panel">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
+                <li><a href="editorial.html">EDITORIAL</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li><a href="actividades.html">ACTIVIDADES</a></li>
+                <li><a href="explora.html">EXPLORAR</a></li>
+                <li><a href="cartografia.html">CARTOGRAFÍA</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header-principal subpage-header">
+        <div class="header-brand">
+            <a href="index.html" class="ecos-palenque" style="text-decoration: none;">ECOS DE PALENQUE</a>
+        </div>
+        <div class="header-right-side">
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="historia.html">HISTORIA</a></li>
+                    <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                    <li><a href="musica.html">MÚSICA</a></li>
+                    <li><a href="editorial.html">EDITORIAL</a></li>
+                    <li><a href="galeria.html">GALERÍA</a></li>
+                </ul>
+            </nav>
+            <!-- BOTÓN HAMBURGUESA INTEGRADO -->
+            <div id="btnMenu" class="hamburguesa-header">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="music-dark-page">
+        <!-- 1. TÍTULO (HERO SECTION) -->
+        <section class="eventor-hero">
+            <div class="eventor-hero-container">
+                <div class="eventor-text-side animate-on-scroll">
+                    <span class="eventor-hero-subtitle">Futuras </span>
+                    <h1 class="eventor-hero-title">Actividades Culturales</h1>
+                    <div class="eventor-btn-group">
+                        <a href="#proximos-eventos" class="btn-eventor-primary">VER CALENDARIO</a>
+                        <a href="musica.html" class="btn-eventor-outline">EXPLORAR MÚSICA</a>
+                    </div>
+                </div>
+                <div class="eventor-images-side animate-on-scroll">
+                    <img src="imagenes/benkos2.jpg" alt="Cultura Palenque" class="eventor-img-large">
+                    <img src="imagenes/benkos.png" alt="Festival de Tambores" class="eventor-img-small">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. TEMPORIZADOR (COUNTDOWN SECTION) -->
+        <section class="eventor-countdown-card animate-on-scroll">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">000</span>
+                <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Segundos</span>
+            </div>
+        </section>
+
+        <!-- 3. EL EVENTO MÁS ESPERADO (DETALLE FESTIVAL) -->
+        <section class="oraz-section" style="padding-top: 5rem; background: rgba(29, 35, 25, 0.4);">
+            <div class="oraz-song-card animate-on-scroll" style="width: 100%; max-width: 1150px; margin: 0 auto; padding: 4rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(229,159,32,0.2); border-radius: 40px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: stretch; backdrop-filter: blur(8px);">
+                <!-- Imagen sincronizada con la altura del contenido derecho -->
+                <div style="border-radius: 25px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.7); display: flex;">
+                    <img src="imagenes/actividad.jpg" alt="Festival de Tambores" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                
+                <!-- Contenedor de contenido -->
+                <div style="color: #e0e0e0; display: flex; flex-direction: column; justify-content: center;">
+                    <span style="color: #FCC940; font-weight: bold; letter-spacing: 5px; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 1rem; display: block;">🥁 EL EVENTO MÁS ESPERADO</span>
+                    <h2 style="font-family: 'bixton', sans-serif; font-size: 3.5rem; color: #ffffff; margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -1px;">Festival de Tambores <br> <span style="color: #FCC940;">y Expresiones 2026</span></h2>
+                    
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span style="background: rgba(229,159,32,0.15); color: #FCC940; padding: 0.5rem 1.2rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem; border: 1px solid rgba(229,159,32,0.4);">📅 9 al 12 de Octubre</span>
+                    </div>
+                    
+                    <h3 style="font-family: 'cardo', serif; font-size: 1.8rem; color: #F3F2C3; margin-bottom: 1.2rem; line-height: 1.2; font-style: italic; opacity: 0.9;">El Alma Sonante de la Diáspora</h3>
+                    
+                    <p style="font-size: 1.1rem; color: #b0b0c0; line-height: 1.7; margin-bottom: 2rem; font-family: 'cardo', serif;">
+                        Es el evento cinematográfico y cultural más importante de San Basilio de Palenque. Un espacio clave donde la música y la lengua convergen.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; color: #F3F2C3; font-size: 0.95rem;">
+                            <li>• Música tradicional</li>
+                            <li>• Talleres de lengua</li>
+                            <li>• Gastronomía típica</li>
+                        </ul>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; color: #F3F2C3; font-size: 0.95rem;">
+                            <li>• Peinados tradicionales</li>
+                            <li>• Danza y presentaciones</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Botón arreglado: se añadió data-event-id y la clase activadora para el modal -->
+                    <a href="javascript:void(0)" data-event-id="tambores" class="js-premium-modal-trigger" style="display: inline-block; width: fit-content; text-decoration: none; font-size: 10pt; padding: 12px 25px; background: #FCC940; color: #1D2319; border-radius: 50px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: 0.3s; box-shadow: 0 10px 25px rgba(252, 201, 64, 0.3); border: none; cursor: pointer; text-align: center;">CONOCER DETALLES</a>
+                </div>
+            </div>
+        </section>
+
+        <div id="proximos-eventos"></div>
+
+        <!-- 4. FUTURAS ACTIVIDADES CULTURALES -->
+        <section class="premium-activities-section" style="padding-top: 8rem;">
+            <div class="premium-section-header animate-on-scroll">
+                <span class="premium-badge">Futuras Actividades Culturales</span>
+                <h2 class="premium-title">El Latido Vivo de Nuestro Calendario Cultural</h2>
+                <p class="premium-subtitle">Descubre las expresiones más profundas de la cultura palenquera a través de festivales, cine y encuentros comunitarios.</p>
+            </div>
+
+            <div class="activity-premium-grid">
+                <!-- FICEM -->
+                <div class="activity-card-premium animate-on-scroll" data-event-id="ficem">
+                    <img src="imagenes/benkos.png" alt="FICEM" class="activity-card-img">
+                    <div class="activity-card-overlay">
+                        <span class="activity-card-date">Septiembre - Noviembre</span>
+                        <h3 class="activity-card-title">Festival Internacional de Cine Evaristo Márquez</h3>
+                        <div class="play-btn-premium">+</div>
+                    </div>
+                </div>
+
+                <!-- Festival de Tambores -->
+                <div class="activity-card-premium animate-on-scroll" data-event-id="tambores">
+                    <img src="imagenes/benkos2.jpg" alt="Festival de Tambores" class="activity-card-img">
+                    <div class="activity-card-overlay">
+                        <span class="activity-card-date">Octubre (Anual)</span>
+                        <h3 class="activity-card-title">Festival de Tambores y Expresiones Culturales</h3>
+                        <div class="play-btn-premium">+</div>
+                    </div>
+                </div>
+
+                <!-- Diáspora Bogotá -->
+                <div class="activity-card-premium animate-on-scroll" data-event-id="diaspora-bogota">
+                    <img src="imagenes/camino.jpg" alt="Diáspora" class="activity-card-img">
+                    <div class="activity-card-overlay">
+                        <span class="activity-card-date">Mayo / Septiembre</span>
+                        <h3 class="activity-card-title">Semana de la Diáspora Palenquera en Bogotá</h3>
+                        <div class="play-btn-premium">+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. EXPERIENCIAS INMERSIVAS (TALLERES) -->
+        <section class="cultural-experiences-section">
+            <div class="premium-section-header animate-on-scroll">
+                <span class="premium-badge">Experiencias Inmersivas</span>
+                <h2 class="premium-title">El Conocimiento Vivo de Palenque</h2>
+                <p class="premium-subtitle">Participa en nuestros procesos comunitarios y descubre la herencia de África en cada gesto, palabra y sonido.</p>
+            </div>
+
+            <div class="cultural-experiences-grid">
+                <!-- 1. Talleres de percusión -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">01</div>
+                    <h3>Talleres de percusión y música tradicional</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué tratan?</b>
+                        Enseñan a tocar instrumentos como el tambor alegre, llamador y marímbula. Aprenderás ritmos ancestrales como bullerengue, son palenquero y mapalé.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        No es solo música: es una forma de transmitir historia y memoria africana de generación en generación.
+                    </div>
+                </div>
+
+                <!-- 2. Talleres de peinados -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">02</div>
+                    <h3>Talleres de peinados y trenzas tradicionales</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué tratan?</b>
+                        Enseñan técnicas de trenzado afro y el profundo significado cultural de cada diseño: identidad, resistencia y herencia.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        Antes, las trenzas eran mapas de escape para las personas esclavizadas. Hoy representan nuestra libertad.
+                    </div>
+                </div>
+
+                <!-- 3. Lengua Palenquera -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">03</div>
+                    <h3>Talleres de lengua palenquera</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué tratan?</b>
+                        Aprende palabras y frases básicas de nuestro idioma materno, su historia y su uso vital en la cotidianidad del pueblo.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        Es una mezcla única de español y lenguas africanas, reconocida como Patrimonio por la UNESCO.
+                    </div>
+                </div>
+
+                <!-- 4. Ritual del Lumbalú -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">04</div>
+                    <h3>Ritual del Lumbalú</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué trata?</b>
+                        Una de nuestras prácticas más profundas: un ritual funerario que incluye cantos, tambores y danzas sagradas.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        No es un acto triste: es una forma de acompañar el alma y honrar la vida de quien ha partido.
+                    </div>
+                </div>
+
+                <!-- 5. Muestras gastronómicas -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">05</div>
+                    <h3>Muestras gastronómicas</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué tratan?</b>
+                        Preparación de dulces típicos (cocadas, alegrías), pescado y arroz con coco, liderada por nuestras portadoras de tradición.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        El sabor de Palenque es el resultado de siglos de adaptación y resistencia culinaria.
+                    </div>
+                </div>
+
+                <!-- 6. Danza y teatro -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">06</div>
+                    <h3>Danza y Teatro Afro</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué tratan?</b>
+                        Coreografías tradicionales y representaciones históricas que narran la esclavitud, la resistencia y la libertad.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        Cada movimiento cuenta la historia de Benkos Biohó y la lucha por nuestra autonomía.
+                    </div>
+                </div>
+
+                <!-- 7. FICEM -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">07</div>
+                    <h3>Formación Audiovisual y Cine Afro</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué trata?</b>
+                        Talleres de cine y producción comunitaria que buscan narrar nuestras realidades desde nuestra propia voz.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        Buscamos que la comunidad cuente su propia historia, no que sea contada por extraños.
+                    </div>
+                </div>
+
+                <!-- 8. Tours culturales -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">08</div>
+                    <h3>Tours y Recorridos Históricos</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué tratan?</b>
+                        Recorridos guiados sobre emancipación, cultura afro y lugares clave del primer pueblo libre de América.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        Caminar por nuestras calles es caminar por la historia viva de la libertad en América.
+                    </div>
+                </div>
+
+                <!-- 9. Conversatorios -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">09</div>
+                    <h3>Conversatorios y Seminarios</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué tratan?</b>
+                        Espacios de reflexión sobre identidad afro, historia de la diáspora, lengua y desafíos culturales contemporáneos.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        La palabra es nuestra herramienta más poderosa para mantener viva nuestra conciencia política.
+                    </div>
+                </div>
+
+                <!-- 10. Kuagro -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">10</div>
+                    <h3>Dinámicas de “Kuagro”</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué tratan?</b>
+                        Conoce nuestra organización social colectiva basada en grupos de edad, clave para la solidaridad comunitaria.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        El kuagro es la célula fundamental que organiza nuestra vida social y mantiene nuestra unidad.
+                    </div>
+                </div>
+
+                <!-- 11. Ferias de emprendimiento -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">11</div>
+                    <h3>Ferias de Emprendimiento</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué tratan?</b>
+                        Exposición y venta de arte afro, textiles, artesanías y productos locales que apoyan el talento joven.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        Apoyar el emprendimiento local es fortalecer la autonomía económica de nuestro territorio.
+                    </div>
+                </div>
+
+                <!-- 12. Proyectos contemporáneos -->
+                <div class="experience-card editorial-card-white animate-on-scroll">
+                    <div class="experience-card-icon">12</div>
+                    <h3>Proyectos Musicales Contemporáneos</h3>
+                    <div class="experience-card-content">
+                        <b>¿De qué tratan?</b>
+                        Fusión de géneros modernos como el rap con la lengua palenquera (ej. Kombilesa Mi), manteniendo viva la tradición.
+                    </div>
+                    <div class="experience-card-tip">
+                        <span class="experience-card-tip-icon">💡</span>
+                        Representa la unión perfecta entre nuestra herencia ancestral y la modernidad de las nuevas generaciones.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. LAZOS DE IDENTIDAD Y RESISTENCIA (REFERENTES) -->
+        <section class="referents-section">
+            <div class="referents-container">
+                <div class="premium-section-header animate-on-scroll">
+                    <span class="premium-badge">Nuestra Red</span>
+                    <h2 class="premium-title">Lazos de Identidad y Resistencia</h2>
+                    <p class="premium-subtitle">Conoce a las personas, colectivos e instituciones que dedican su labor a la preservación y dignificación del legado afro palenquero.</p>
+                </div>
+
+                <!-- CATEGORÍA 1: COLECTIVOS -->
+                <div class="referents-category-group animate-on-scroll">
+                    <h3 class="referents-category-title">Colectivos y Organizaciones</h3>
+                    <div class="referents-grid">
+                        <div class="referent-item editorial-card-white">
+                            <h4>ASOPRADUCE</h4>
+                            <p>Agrupa mujeres y hombres que trabajan en: dulces tradicionales, agricultura local y experiencias etnoturísticas. Enfocada en dignificar el trabajo afrodescendiente.</p>
+                            <p style="font-size: 0.9rem; color: #FCC940; font-family: 'cardo', serif; margin-top: 5px;"><i>Ideal para: sostenibilidad, tradición + economía</i></p>
+                            <a href="https://colombia.un.org/es/294744-de-san-basilio-de-palenque-para-el-mundo-herencia-afrocolombiana-que-construye-futuro?utm_source=chatgpt.com" target="_blank" class="referent-link">Conocer más →</a>
+                        </div>
+                        <div class="referent-item editorial-card-white premium-img-effect">
+                            <h4>Corp. Mejor Palenque</h4>
+                            <p>Entidad enfocada en la gestión sociocultural y el fortalecimiento del tejido comunitario dentro del territorio de San Basilio.</p>
+                            <a href="https://www.datacreditoempresas.com.co/directorio/corporacion-sociocultural-afrodescendientes-mejor-palenque.html" target="_blank" class="referent-link">Detalles →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORÍA 2: APOYO INSTITUCIONAL -->
+                <div class="referents-category-group animate-on-scroll">
+                    <h3 class="referents-category-title">Iniciativas y Apoyo Institucional</h3>
+                    <div class="referents-grid">
+                        <div class="referent-item editorial-card-white">
+                            <h4>Conexión Afro</h4>
+                            <p>Estrategia del Ministerio de Cultura para visibilizar y celebrar la riqueza de los pueblos afrocolombianos, negros, raizales y palenqueros.</p>
+                            <a href="https://www.mincultura.gov.co/noticias/Paginas/el-minculturas-lanza-la-estrategia-conexion-afro-una-iniciativa-para-celebrar-a-los-pueblos-afrocolombianos-negros.aspx" target="_blank" class="referent-link">Estrategia Nacional →</a>
+                        </div>
+                        <div class="referent-item editorial-card-white">
+                            <h4>Fundación ACUA & FIDA</h4>
+                            <p>Organizaciones que impulsan el desarrollo rural y proyectos productivos que promueven la memoria y cultura en comunidades afro.</p>
+                            <a href="https://colombia.un.org/es/294744-de-san-basilio-de-palenque-para-el-mundo-herencia-afrocolombiana-que-construye-futuro" target="_blank" class="referent-link">Proyectos Rurales →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORÍA 3: REFERENTES CULTURALES -->
+                <div class="referents-category-group animate-on-scroll">
+                    <h3 class="referents-category-title">Personas y Referentes Culturales</h3>
+                    <div class="referents-grid">
+                        <div class="referent-item editorial-card-white">
+                            <h4>Benkos Biohó</h4>
+                            <p>Fundador de San Basilio de Palenque y líder histórico de la resistencia. Símbolo eterno de la libertad afro en toda América.</p>
+                            <a href="https://www.icbf.gov.co/noticias/icbf-acompano-audiencia-publica-en-san-basilio-de-palenque-en-bolivar" target="_blank" class="referent-link">Legado Histórico →</a>
+                        </div>
+                        <div class="referent-item editorial-card-white">
+                            <h4>Kombilesa Mi</h4>
+                            <p>Agrupación musical contemporánea que fusiona el rap con la lengua palenquera, rescatando nuestra identidad para las nuevas generaciones.</p>
+                            <a href="https://elpais.com/america-colombia/2025-06-14/kombilesa-mi-el-grupo-que-rescata-la-lengua-palenquera-a-traves-del-rap.html" target="_blank" class="referent-link">Rap Folclórico →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORÍA 4: CONCEPTOS CLAVE -->
+                <div class="referents-category-group animate-on-scroll">
+                    <h3 class="referents-category-title">Saberes y Resistencia</h3>
+                    <div class="referents-grid">
+                        <div class="referent-item editorial-card-white">
+                            <h4>Lengua Palenquera</h4>
+                            <p>Única lengua criolla de origen africano en Colombia, preservada durante siglos como herramienta de comunicación y libertad.</p>
+                            <a href="https://www.medicinalegal.gov.co/noticias/-/asset_publisher/vLcVEedo8qgD/content/enfoque-diferencial-etnico-afrodescendientes-negras-palenqueras-y-raizales" target="_blank" class="referent-link">Enfoque Étnico →</a>
+                        </div>
+                        <div class="referent-item editorial-card-white">
+                            <h4>Patrimonio UNESCO</h4>
+                            <p>San Basilio de Palenque fue declarado Obra Maestra del Patrimonio Oral e Inmaterial de la Humanidad por su valor cultural excepcional.</p>
+                            <a href="index.html" class="referent-link">Volver al Inicio →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FUENTES Y CRÉDITOS -->
+                <!-- FUENTES Y CRÉDITOS PREMIUM -->
+                <div class="referents-sources animate-on-scroll" style="margin-top: 6rem; padding: 3rem; background: rgba(29, 35, 25, 0.6); border: 1px solid rgba(229,159,32,0.3); border-radius: 20px; text-align: center; backdrop-filter: blur(10px);">
+                    <div style="color: #FCC940; font-size: 2rem; margin-bottom: 1rem;">⚖️</div>
+                    <p style="color: #F3F2C3; font-family: 'cardo', serif; font-size: 1.1rem; line-height: 1.8; max-width: 850px; margin: 0 auto;">
+                        <strong style="color: #ffffff; text-transform: uppercase; letter-spacing: 3px; display: block; margin-bottom: 1rem; font-family: 'bixton', sans-serif;">Derechos de autor y fuentes</strong>
+                        Toda la información presentada ha sido recopilada y parafraseada de fuentes oficiales para garantizar el respeto a la propiedad intelectual y la veracidad histórica de San Basilio de Palenque.
+                    </p>
+                    <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-size: 0.9rem; font-family: 'caramella', sans-serif;">
+                        <a href="https://colombia.un.org/" target="_blank" style="color: #FCC940; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s;" onmouseover="this.style.borderColor='#FCC940'" onmouseout="this.style.borderColor='transparent'">Naciones Unidas</a>
+                        <span style="color: rgba(255,255,255,0.2);">•</span>
+                        <a href="https://www.mincultura.gov.co/" target="_blank" style="color: #FCC940; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s;" onmouseover="this.style.borderColor='#FCC940'" onmouseout="this.style.borderColor='transparent'">MinCultura</a>
+                        <span style="color: rgba(255,255,255,0.2);">•</span>
+                        <a href="https://elpais.com/" target="_blank" style="color: #FCC940; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s;" onmouseover="this.style.borderColor='#FCC940'" onmouseout="this.style.borderColor='transparent'">El País</a>
+                        <span style="color: rgba(255,255,255,0.2);">•</span>
+                        <a href="https://www.icbf.gov.co/" target="_blank" style="color: #FCC940; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s;" onmouseover="this.style.borderColor='#FCC940'" onmouseout="this.style.borderColor='transparent'">ICBF</a>
+                        <span style="color: rgba(255,255,255,0.2);">•</span>
+                        <a href="https://www.medicinalegal.gov.co/" target="_blank" style="color: #FCC940; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s;" onmouseover="this.style.borderColor='#FCC940'" onmouseout="this.style.borderColor='transparent'">Medicina Legal</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. DERECHOS DE AUTOR & FOOTER -->
+        <footer class="oraz-footer">
+            <!-- DATOS DE CONTACTO (MOVIDOS) -->
+            <div class="eventor-info-bar animate-on-scroll" style="margin-bottom: 3rem; width: 100%; border: none; box-shadow: none; background: transparent; padding: 0;">
+                <div class="info-bar-item" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(229,159,32,0.2);">
+                    <div class="info-bar-icon">📧</div>
+                    <div class="info-bar-text" style="color: #F3F2C3;">cultura@palenque.gov.co</div>
+                </div>
+                <div class="info-bar-item" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(229,159,32,0.2);">
+                    <div class="info-bar-icon">📍</div>
+                    <div class="info-bar-text" style="color: #F3F2C3;">Plaza Principal, San Basilio</div>
+                </div>
+                <div class="info-bar-item" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(229,159,32,0.2);">
+                    <div class="info-bar-icon">📞</div>
+                    <div class="info-bar-text" style="color: #F3F2C3;">+57 (300) 123-4567</div>
+                </div>
+            </div>
+
+            <div class="oraz-footer-bottom" style="border-top: 1px solid rgba(229,159,32,0.3); padding-top: 2rem; flex-direction: column; gap: 1.5rem; text-align: center;">
+                <div style="color: #ffffff; font-size: 1.1rem; font-weight: 600; letter-spacing: 1px;">© ECOS DE PALENQUE 2026</div>
+                <div style="color: #F3F2C3; font-size: 0.9rem; max-width: 600px; margin: 0 auto; line-height: 1.5;">
+                    Toda la información, material fotográfico y agenda de actividades culturales están protegidos por derechos de autor. 
+                    <br><span style="color: #FCC940;">Prohibida su reproducción total o parcial sin autorización.</span>
+                </div>
+                
+                <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 1rem;">
+                    <a href="index.html" class="center-logo" style="font-size: 1rem; color: #ffffff; text-decoration: none; border: 1px solid #FCC940; padding: 8px 20px; border-radius: 50px;">Volver al Inicio</a>
+                </div>
+                
+                <div class="oraz-footer-links" style="opacity: 0.8;">
+                    <a href="musica.html">Música</a>
+                    <a href="gastronomia.html">Gastronomía</a>
+                    <a href="historia.html">Historia</a>
+                    <a href="editorial.html">Editorial</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- PREMIUM MODAL SYSTEM -->
+    <div id="premium-modal-overlay" class="premium-modal-overlay">
+        <div id="premium-modal-box" class="premium-modal-box">
+            <button id="close-modal" class="premium-modal-close" aria-label="Cerrar">&times;</button>
+            <div class="premium-modal-header">
+                <span id="modal-badge" class="premium-modal-badge">CATEGORÍA</span>
+                <h2 id="modal-title" class="premium-modal-title">Título del Evento</h2>
+            </div>
+            <div id="modal-content" class="premium-modal-content">
+                <!-- Contenido dinámico via JS -->
+            </div>
+            <div class="premium-modal-footer">
+                <div id="modal-dates" class="premium-modal-dates">
+                    📅 Fecha del evento
+                </div>
+                <button class="btn-eventor-outline" style="padding: 10px 25px; font-size: 0.8rem;" onclick="document.getElementById('close-modal').click()">CERRAR VENTANA</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

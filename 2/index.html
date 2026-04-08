@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Basilio de Palenque – Portada</title>
+    <link rel="stylesheet" href="styles.css?v=10">
+</head>
+
+<body>
+    <!-- PANEL LATERAL (VENTANA AZUL) -->
+    <div class="panel" id="panel">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
+                <li><a href="editorial.html">EDITORIAL</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li><a href="actividades.html">ACTIVIDADES</a></li>
+                <li><a href="explora.html">EXPLORAR</a></li>
+                <li><a href="cartografia.html">CARTOGRAFÍA</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- SECCIÓN 1: PORTADA (AVIÓN) -->
+    <section id="hero-parallax" class="sec-parallax">
+        <div class="parallax-container">
+            <!-- Header con Logo Texto y Nav -->
+            <header class="header-principal">
+                <div class="header-brand">
+                    <a href="index.html" class="ecos-palenque" style="text-decoration: none;">ECOS DE PALENQUE</a>
+                </div>
+                <div class="header-right-side">
+                    <nav class="nav-desktop">
+                        <ul>
+                            <li><a href="historia.html">HISTORIA</a></li>
+                            <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                            <li><a href="musica.html">MÚSICA</a></li>
+                            <li><a href="editorial.html">EDITORIAL</a></li>
+                            <li><a href="galeria.html">GALERÍA</a></li>
+                        </ul>
+                    </nav>
+                    <!-- BOTÓN HAMBURGUESA INTEGRADO -->
+                    <div id="btnMenu" class="hamburguesa-header">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="layer layer-bg" data-speed="0">
+                <img src="parallax/fondo%20azul.jpg" alt="Fondo Azul" class="hero-window-pos">
+            </div>
+            <div class="layer layer-fg" data-speed="0">
+                <img src="parallax/avion%20sin%20fondo2.png" alt="Ventana Avión" class="hero-window-pos"> 
+                <div class="light-overlay"></div>
+                <div class="hero-title-container">
+                    <h2 class="san-basilio">San Basilio de</h2>
+                    <h1 class="palenque">PALENQUE</h1>
+                    <p class="hero-subtitle">Descubre la cultura, historia<br>y tradiciones de este pueblo único.</p>
+                    <button id="btnBienvenida" class="btn-bienvenida">BIENVENIDO(A)</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: MEMORIA (ÁRBOL Y GARITA) -->
+    <section id="memory-parallax" class="sec-parallax">
+        <div class="parallax-container">
+            <div class="layer layer-bg" data-speed="-0.3" style="background-image: url('parallax/fondo%20azul.jpg');"></div>
+            <!-- Capa de Memoria Image parallax -->
+            <div class="layer layer-fg" data-speed="0.15">
+                <img src="parallax/3.png" alt="Overlay Memoria" class="memory-img-pos">
+            </div>
+            <!-- Capa de Texto Estática -->
+            <div class="layer layer-fg" data-speed="0">
+                <div class="content-text memory-text">
+                    <h1 class="section-title animate-on-scroll">MEMORIA</h1>
+                    <p>En San Basilio de Palenque no solo vive una comunidad, vive la memoria. Aquí, cada sonrisa, cada palabra en lengua palenquera y cada ritmo de tambor cuenta una historia que se negó a desaparecer.</p>
+                    <p>Ser afrodescendiente en Palenque es resistencia, es orgullo, es herencia viva. Es llevar en la piel y en el corazón la fuerza de quienes lucharon por la libertad cuando todo parecía imposible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: CULTURA (IGLESIA) -->
+    <section id="culture-parallax" class="sec-parallax">
+        <div class="parallax-container">
+            <div class="layer layer-bg" data-speed="-0.3" style="background-image: url('parallax/fondo%20azul.jpg');"></div>
+            <!-- CAPA DE LA IGLESIA -->
+            <div class="layer layer-fg" data-speed="1.2"> 
+                <img src="parallax/4.png" alt="Cultura" class="church-img-pos">
+            </div>
+            <!-- CAPA DE TEXTO -->
+            <div class="layer layer-fg" data-speed="0">
+                <div class="culture-text-pos">
+                    <h1 class="section-title animate-on-scroll">CULTURA</h1>
+                    <p>Esta no es solo una cultura para observar, es una cultura para sentir. En su música, en su comida y en sus tradiciones hay identidad, hay raíces, hay verdad.</p>
+                    <p>Te invitamos a conocer un poco sobre ellos. Esperamos que, al igual que nosotras, te quedes con una sonrisa que no se borra.</p>
+                    <div style="display: flex; justify-content: center; margin-top: 30px;">
+                        <a href="index.html" class="btn-bienvenida" style="text-decoration: none; display: inline-block; opacity: 1; animation: none; letter-spacing: 3px;">VOLVER AL INICIO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="height: 120px; background: #1D2319; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+        <p style="color: #fff; font-family: 'carmelle'; opacity: 0.5; margin: 0;">San Basilio de Palenque &copy; 2026</p>
+        <p style="color: rgba(252, 201, 64, 0.3); font-family: 'caramella'; font-size: 8pt; text-transform: uppercase; letter-spacing: 1px; margin: 0;">Imágenes proporcionadas por &copy; Freepik</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- PANEL LATERAL (VENTANA AZUL) -->
+    <div class="panel" id="panel">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
+                <li><a href="editorial.html">EDITORIAL</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li><a href="actividades.html">ACTIVIDADES</a></li>
+                <li><a href="explora.html">EXPLORAR</a></li>
+                <li><a href="cartografia.html">CARTOGRAFÍA</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header-principal subpage-header">
+        <div class="header-brand">
+            <a href="index.html" class="ecos-palenque" style="text-decoration: none;">ECOS DE PALENQUE</a>
+        </div>
+        <div class="header-right-side">
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="historia.html">HISTORIA</a></li>
+                    <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                    <li><a href="musica.html">MÚSICA</a></li>
+                    <li><a href="editorial.html">EDITORIAL</a></li>
+                    <li><a href="galeria.html">GALERÍA</a></li>
+                </ul>
+            </nav>
+            <!-- BOTÓN HAMBURGUESA INTEGRADO -->
+            <div id="btnMenu" class="hamburguesa-header">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+  <section class="explorar" id="exploreSection">
+    <h2 class="section-title animate-on-scroll">Explora el Territorio</h2>
+
+    <div class="botones">
+      <button onclick="cambiarMapa('Cartagena Colombia')" class="btn-geo">Cartagena</button>
+      <button onclick="cambiarMapa('San Basilio de Palenque')" class="btn-geo">Palenque</button>
+    </div>
+
+    <div class="mapa-container premium-img-effect" id="mapWrapper">
+      <div class="mapa">
+        <iframe id="mapaFrame" src="https://www.google.com/maps?q=San+Basilio+de+Palenque&output=embed" width="100%"
+          height="500" style="border:0;" loading="lazy">
+        </iframe>
+      </div>
+      <p class="map-attribution">Mapas proporcionados por &copy; Google Maps</p>
+    </div>
+
+    <a href="index.html" class="back-link">← Volver al Portal</a>
+  </section>
+
+  <script src="javascript.js"></script>
+  <script>
+    function cambiarMapa(lugar) {
+      const frame = document.getElementById("mapaFrame");
+      const wrapper = document.getElementById("mapWrapper");
+
+      wrapper.style.opacity = "0";
+      wrapper.style.transform = "scale(0.95)";
+
+      setTimeout(() => {
+        frame.src = "https://www.google.com/maps?q=" + lugar.replace(/ /g, "+") + "&output=embed";
+        frame.onload = () => {
+          wrapper.style.opacity = "1";
+          wrapper.style.transform = "scale(1)";
+        };
+      }, 300);
+    }
+  </script>
+</body>
+
+</html>

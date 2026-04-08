@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Memorias - ECOS DE PALENQUE</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="gallery-page">
+    <!-- PANEL LATERAL (VENTANA AZUL) -->
+    <div class="panel" id="panel">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
+                <li><a href="editorial.html">EDITORIAL</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li><a href="actividades.html">ACTIVIDADES</a></li>
+                <li><a href="explora.html">EXPLORAR</a></li>
+                <li><a href="cartografia.html">CARTOGRAFÍA</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header-principal subpage-header">
+        <div class="header-brand">
+            <a href="index.html" class="ecos-palenque" style="text-decoration: none;">ECOS DE PALENQUE</a>
+        </div>
+        <div class="header-right-side">
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="historia.html">HISTORIA</a></li>
+                    <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                    <li><a href="musica.html">MÚSICA</a></li>
+                    <li><a href="editorial.html">EDITORIAL</a></li>
+                    <li><a href="galeria.html">GALERÍA</a></li>
+                </ul>
+            </nav>
+            <!-- BOTÓN HAMBURGUESA INTEGRADO -->
+            <div id="btnMenu" class="hamburguesa-header">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="gallery-masonry-wrapper">
+        <!-- Título Superior -->
+        <div class="gallery-header-title">
+            <h1 class="radiant-title">GALERÍA <span>de memorias</span></h1>
+        </div>
+
+        <div class="masonry-container">
+            <!-- COLUMNA 1 (Hacia Arriba) -->
+            <div class="masonry-column scroll-up">
+                <div class="masonry-column-inner">
+                    <div class="masonry-item" data-index="0"><img src="rueda/1.jpg" alt="Memoria 1"></div>
+                    <div class="masonry-item" data-index="4"><img src="rueda/5.jpg" alt="Memoria 5"></div>
+                    <div class="masonry-item" data-index="8"><img src="rueda/9.jpg" alt="Memoria 9"></div>
+                    <div class="masonry-item" data-index="12"><img src="rueda/13.jpg" alt="Memoria 13"></div>
+                    <div class="masonry-item" data-index="16"><img src="rueda/17.jpg" alt="Memoria 17"></div>
+                    <div class="masonry-item" data-index="20"><img src="rueda/21.jpg" alt="Memoria 21"></div>
+                    <!-- Duplicado para loop infinito -->
+                    <div class="masonry-item" data-index="0"><img src="rueda/1.jpg" alt="Memoria 1"></div>
+                    <div class="masonry-item" data-index="4"><img src="rueda/5.jpg" alt="Memoria 5"></div>
+                    <div class="masonry-item" data-index="8"><img src="rueda/9.jpg" alt="Memoria 9"></div>
+                    <div class="masonry-item" data-index="12"><img src="rueda/13.jpg" alt="Memoria 13"></div>
+                    <div class="masonry-item" data-index="16"><img src="rueda/17.jpg" alt="Memoria 17"></div>
+                    <div class="masonry-item" data-index="20"><img src="rueda/21.jpg" alt="Memoria 21"></div>
+                </div>
+            </div>
+            <!-- COLUMNA 2 (Hacia Abajo) -->
+            <div class="masonry-column scroll-down">
+                <div class="masonry-column-inner">
+                    <div class="masonry-item" data-index="1"><img src="rueda/2.jpg" alt="Memoria 2"></div>
+                    <div class="masonry-item" data-index="5"><img src="rueda/6.jpg" alt="Memoria 6"></div>
+                    <div class="masonry-item" data-index="9"><img src="rueda/10.jpg" alt="Memoria 10"></div>
+                    <div class="masonry-item" data-index="13"><img src="rueda/14.jpg" alt="Memoria 14"></div>
+                    <div class="masonry-item" data-index="17"><img src="rueda/18.jpg" alt="Memoria 18"></div>
+                    <div class="masonry-item" data-index="21"><img src="rueda/22.jpg" alt="Memoria 22"></div>
+                    <!-- Duplicado -->
+                    <div class="masonry-item" data-index="1"><img src="rueda/2.jpg" alt="Memoria 2"></div>
+                    <div class="masonry-item" data-index="5"><img src="rueda/6.jpg" alt="Memoria 6"></div>
+                    <div class="masonry-item" data-index="9"><img src="rueda/10.jpg" alt="Memoria 10"></div>
+                    <div class="masonry-item" data-index="13"><img src="rueda/14.jpg" alt="Memoria 14"></div>
+                    <div class="masonry-item" data-index="17"><img src="rueda/18.jpg" alt="Memoria 18"></div>
+                    <div class="masonry-item" data-index="21"><img src="rueda/22.jpg" alt="Memoria 22"></div>
+                </div>
+            </div>
+            <!-- COLUMNA 3 (Hacia Arriba) -->
+            <div class="masonry-column scroll-up">
+                <div class="masonry-column-inner delay-1">
+                    <div class="masonry-item" data-index="2"><img src="rueda/3.jpg" alt="Memoria 3"></div>
+                    <div class="masonry-item" data-index="6"><img src="rueda/7.jpg" alt="Memoria 7"></div>
+                    <div class="masonry-item" data-index="10"><img src="rueda/11.jpg" alt="Memoria 11"></div>
+                    <div class="masonry-item" data-index="14"><img src="rueda/15.jpg" alt="Memoria 15"></div>
+                    <div class="masonry-item" data-index="18"><img src="rueda/19.jpg" alt="Memoria 19"></div>
+                    <!-- Duplicado -->
+                    <div class="masonry-item" data-index="2"><img src="rueda/3.jpg" alt="Memoria 3"></div>
+                    <div class="masonry-item" data-index="6"><img src="rueda/7.jpg" alt="Memoria 7"></div>
+                    <div class="masonry-item" data-index="10"><img src="rueda/11.jpg" alt="Memoria 11"></div>
+                    <div class="masonry-item" data-index="14"><img src="rueda/15.jpg" alt="Memoria 15"></div>
+                    <div class="masonry-item" data-index="18"><img src="rueda/19.jpg" alt="Memoria 19"></div>
+                </div>
+            </div>
+            <!-- COLUMNA 4 (Hacia Abajo) -->
+            <div class="masonry-column scroll-down">
+                <div class="masonry-column-inner delay-2">
+                    <div class="masonry-item" data-index="3"><img src="rueda/4.jpg" alt="Memoria 4"></div>
+                    <div class="masonry-item" data-index="7"><img src="rueda/8.jpg" alt="Memoria 8"></div>
+                    <div class="masonry-item" data-index="11"><img src="rueda/12.jpg" alt="Memoria 12"></div>
+                    <div class="masonry-item" data-index="15"><img src="rueda/16.jpg" alt="Memoria 16"></div>
+                    <div class="masonry-item" data-index="19"><img src="rueda/20.jpg" alt="Memoria 20"></div>
+                    <!-- Duplicado -->
+                    <div class="masonry-item" data-index="3"><img src="rueda/4.jpg" alt="Memoria 4"></div>
+                    <div class="masonry-item" data-index="7"><img src="rueda/8.jpg" alt="Memoria 8"></div>
+                    <div class="masonry-item" data-index="11"><img src="rueda/12.jpg" alt="Memoria 12"></div>
+                    <div class="masonry-item" data-index="15"><img src="rueda/16.jpg" alt="Memoria 16"></div>
+                    <div class="masonry-item" data-index="19"><img src="rueda/20.jpg" alt="Memoria 20"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón Volver al Inicio en la galería -->
+        <a href="index.html" class="back-link back-link-gallery pull-up" style="position: absolute; bottom: 30px; z-index: 100;">← VOLVER AL INICIO</a>
+    </main>
+
+    <!-- MODAL SLIDESHOW / LIGHTBOX -->
+    <div id="gallery-lightbox" class="lightbox-overlay">
+        <div class="lightbox-controls">
+            <button id="lightbox-close" class="lightbox-btn" title="Cerrar (Esc)">&times;</button>
+            <button id="lightbox-play" class="lightbox-btn" title="Pausar/Reproducir">&#10074;&#10074;</button> <!-- Icono de pausa por defecto -->
+        </div>
+        
+        <div class="lightbox-content">
+            <button id="lightbox-prev" class="lightbox-nav-btn">&#10094;</button>
+            <img id="lightbox-img" src="" alt="Vista Previa Completa">
+            <button id="lightbox-next" class="lightbox-nav-btn">&#10095;</button>
+        </div>
+        
+        <div class="lightbox-indicators" id="lightbox-dots"></div>
+
+        <!-- Créditos de Audio -->
+        <div class="lightbox-credits">
+            Créditos: audio sacado de Spotify autor: emilson Pacheco - tradición bullerengue
+        </div>
+
+        <!-- Audio del Galería (Bucle) -->
+        <audio id="gallery-audio" src="music/melodia.mp4" loop preload="auto"></audio>
+    </div>
+
+    <!-- Script del Slideshow -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.masonry-item');
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const btnClose = document.getElementById('lightbox-close');
+            const btnPrev = document.getElementById('lightbox-prev');
+            const btnNext = document.getElementById('lightbox-next');
+            const btnPlay = document.getElementById('lightbox-play');
+            const dotsContainer = document.getElementById('lightbox-dots');
+            const galleryAudio = document.getElementById('gallery-audio');
+
+            // Preparar el array de imágenes ordenado por data-index
+            let imagesArray = [];
+            items.forEach(item => {
+                const index = parseInt(item.getAttribute('data-index'));
+                if(!imagesArray[index]) {
+                    imagesArray[index] = item.querySelector('img').src;
+                }
+            });
+            // Filtrar posibles vacíos
+            imagesArray = imagesArray.filter(src => src !== undefined);
+
+            let currentIndex = 0;
+            let slideshowInterval;
+            let isPlaying = true;
+
+            // Crear dots
+            imagesArray.forEach((_, idx) => {
+                const dot = document.createElement('span');
+                dot.classList.add('lightbox-dot');
+                if(idx === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    goToSlide(idx);
+                    resetInterval(); // Reiniciar el temporizador al cambiar manualmente
+                });
+                dotsContainer.appendChild(dot);
+            });
+            const dots = document.querySelectorAll('.lightbox-dot');
+
+            function updateSlide(index) {
+                // Fade out
+                lightboxImg.style.opacity = 0;
+                
+                setTimeout(() => {
+                    lightboxImg.src = imagesArray[index];
+                    
+                    // Actualizar dots
+                    dots.forEach(d => d.classList.remove('active'));
+                    if(dots[index]) dots[index].classList.add('active');
+                    
+                    // Fade in
+                    lightboxImg.style.opacity = 1;
+                }, 300); // 300ms de transición
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % imagesArray.length;
+                updateSlide(currentIndex);
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
+                updateSlide(currentIndex);
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                updateSlide(currentIndex);
+            }
+
+            function startSlideshow() {
+                if(!isPlaying) return;
+                slideshowInterval = setInterval(nextSlide, 3500); // Avanza cada 3.5 segundos
+                btnPlay.innerHTML = '&#10074;&#10074;'; // Icono Pausa
+            }
+
+            function stopSlideshow() {
+                clearInterval(slideshowInterval);
+                btnPlay.innerHTML = '&#9654;'; // Icono Play
+            }
+
+            function resetInterval() {
+                if(isPlaying) {
+                    stopSlideshow();
+                    startSlideshow();
+                }
+            }
+
+            function togglePlay() {
+                isPlaying = !isPlaying;
+                if(isPlaying) {
+                    startSlideshow();
+                } else {
+                    stopSlideshow();
+                }
+            }
+
+            // Abrir lightbox al hacer clic en imagen
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    const idx = parseInt(item.getAttribute('data-index'));
+                    currentIndex = idx;
+                    updateSlide(currentIndex);
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Evitar scroll de fondo
+                    if(isPlaying) startSlideshow();
+                    
+                    // Solo intentar reproducir audio tras la primera interacción del usuario
+                    galleryAudio.play().catch(e => console.log("Auto-play prevented until interaction."));
+                });
+            });
+
+            // Cerrar lightbox
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Restaurar scroll
+                stopSlideshow();
+                
+                // Detener y resetear audio
+                galleryAudio.pause();
+                galleryAudio.currentTime = 0;
+            }
+
+            btnClose.addEventListener('click', closeLightbox);
+            
+            // Navegación click
+            btnNext.addEventListener('click', () => {
+                nextSlide();
+                resetInterval();
+            });
+            btnPrev.addEventListener('click', () => {
+                prevSlide();
+                resetInterval();
+            });
+            btnPlay.addEventListener('click', togglePlay);
+
+            // Cerrar al hacer clic fuera de la imagen (en el fondo oscuro)
+            lightbox.addEventListener('click', (e) => {
+                if(e.target === lightbox || e.target.classList.contains('lightbox-content')) {
+                    closeLightbox();
+                }
+            });
+
+            // Soporte Teclado
+            document.addEventListener('keydown', (e) => {
+                if(!lightbox.classList.contains('active')) return;
+                if(e.key === 'Escape') closeLightbox();
+                if(e.key === 'ArrowRight') { nextSlide(); resetInterval(); }
+                if(e.key === 'ArrowLeft') { prevSlide(); resetInterval(); }
+                if(e.key === ' ') { e.preventDefault(); togglePlay(); }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

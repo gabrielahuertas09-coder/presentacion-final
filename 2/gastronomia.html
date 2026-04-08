@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomía - ECOS DE PALENQUE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Estilos específicos de carrusel y animaciones que pueden permanecer aquí si son únicos, 
+           pero la mayoría se han movido a styles.css */
+        .featured-dish-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .featured-image-box { height: 500px; }
+        .category-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .category-box {
+            background: #faf7f2;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PANEL LATERAL (VENTANA AZUL) -->
+    <div class="panel" id="panel">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
+                <li><a href="editorial.html">EDITORIAL</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li><a href="actividades.html">ACTIVIDADES</a></li>
+                <li><a href="explora.html">EXPLORAR</a></li>
+                <li><a href="cartografia.html">CARTOGRAFÍA</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header-principal subpage-header">
+        <div class="header-brand">
+            <a href="index.html" class="ecos-palenque" style="text-decoration: none;">ECOS DE PALENQUE</a>
+        </div>
+        <div class="header-right-side">
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="historia.html">HISTORIA</a></li>
+                    <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                    <li><a href="musica.html">MÚSICA</a></li>
+                    <li><a href="editorial.html">EDITORIAL</a></li>
+                    <li><a href="galeria.html">GALERÍA</a></li>
+                </ul>
+            </nav>
+            <!-- BOTÓN HAMBURGUESA INTEGRADO -->
+            <div id="btnMenu" class="hamburguesa-header">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container" style="background-color: #1D2319; padding: 3rem 5%;">
+        <div class="gastronomy-ancestral animate-on-scroll">
+            <header class="ancestral-header">
+                <h2 class="section-title animate-on-scroll"
+                    style="color: #1D2319; text-shadow: 0 0 5px #F3F2C3, 0 0 10px rgba(29, 35, 25,0.5);">SABORES DE
+                    PALENQUE</h2>
+                <p style="text-align: center; margin: 0 auto; color: #1D2319;">La gastronomía de San Basilio de Palenque
+                    es una herencia viva que fusiona técnicas africanas con ingredientes del Caribe colombiano,
+                    destacándose por el uso maestral del coco, el pescado ahumado y las legumbres.</p>
+            </header>
+
+            <!-- Plato Principal (Featured) -->
+            <section class="featured-dish-container">
+                <div class="featured-image-box">
+                    <div class="ancestral-carousel" id="gastronomy-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <img src="imagenes/Plato tradicional colombiano en hoja de plátano.png" alt="Pescado">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="imagenes/Arepas de huevo con bebidas frías.png" alt="arepa">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="imagenes/Patacones con queso fresco.png" alt="patacon">
+                            </div>
+                        </div>
+                        <button class="carousel-btn carousel-prev"></button>
+                        <button class="carousel-btn carousel-next"></button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--recetas-->
+                <div class="featured-info gastro-info" style="display: flex;">
+                    <h3>Pescado con Arroz con Coco</h3>
+                    <p>Pescado entero sazonado con especias locales y frito hasta alcanzar una piel crujiente y dorada.
+                        Servido sobre hoja de plátano, acompañado de arroz con coco ligeramente dulce, tajadas de
+                        plátano maduro caramelizadas y ensalada fresca. Un plato que reúne la esencia de la gastronomía
+                        palenquera en cada elemento.</p>
+
+                    <button type="button" class="btn-recipe"
+                        style="border: none; border-bottom: 4px solid #FCC940; cursor: pointer; font-size: 1rem; font-family: inherit;"
+                        onclick="const content = this.nextElementSibling; content.style.display = content.style.display === 'block' ? 'none' : 'block';">Ver
+                        Receta →</button>
+                    <div class="recipe-content"
+                        style="display: none; margin-top: 1.5rem; text-align: left; background: rgba(0,0,0,0.03); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #FCC940;">
+                        <h4 style="margin-bottom: 0.5rem; color: #1D2319;">🧾 Ingredientes</h4>
+                        <div style="margin-bottom: 1rem; padding-left: 1.5rem; color: #555;">
+                            <strong>Para el pescado:</strong>
+                            <ul style="margin-bottom: 0.8rem; margin-top: 0.2rem; padding-left: 1.5rem;">
+                                <li>1 pescado entero (mojarra o pargo)</li>
+                                <li>Ajo, sal, limón</li>
+                                <li>Aceite</li>
+                            </ul>
+                            <strong>Para el arroz con coco:</strong>
+                            <ul style="margin-bottom: 0.8rem; margin-top: 0.2rem; padding-left: 1.5rem;">
+                                <li>2 tazas de arroz</li>
+                                <li>1 coco (o leche de coco)</li>
+                                <li>Azúcar o panela</li>
+                                <li>Sal</li>
+                            </ul>
+                            <strong>Acompañantes:</strong>
+                            <ul style="margin-top: 0.2rem; padding-left: 1.5rem;">
+                                <li>Plátano maduro</li>
+                                <li>Ensalada (re pollo, zanahoria, limón)</li>
+                            </ul>
+                        </div>
+
+                        <h4 style="margin-bottom: 0.5rem; color: #1D2319;">Preparación</h4>
+                        <div style="margin-bottom: 1rem; padding-left: 1.5rem; color: #555;">
+                            <strong>Pescado:</strong>
+                            <ol style="margin-bottom: 0.8rem; margin-top: 0.2rem; padding-left: 1.5rem;">
+                                <li style="margin-bottom: 0.3rem;">Limpia el pescado y hazle cortes.</li>
+                                <li style="margin-bottom: 0.3rem;">Adoba con ajo, sal y limón.</li>
+                                <li style="margin-bottom: 0.3rem;">Fríe en aceite caliente hasta que quede crujiente.
+                                </li>
+                            </ol>
+                            <strong>Arroz con coco:</strong>
+                            <ol style="margin-bottom: 0.8rem; margin-top: 0.2rem; padding-left: 1.5rem;">
+                                <li style="margin-bottom: 0.3rem;">Cocina la leche de coco hasta que se forme una
+                                    especie de “titoté” (aceite del coco).</li>
+                                <li style="margin-bottom: 0.3rem;">Agrega el arroz, agua, sal y un toque dulce.</li>
+                                <li style="margin-bottom: 0.3rem;">Cocina como arroz normal.</li>
+                            </ol>
+                            <strong>Plátano:</strong>
+                            <ol style="margin-bottom: 0.8rem; margin-top: 0.2rem; padding-left: 1.5rem;">
+                                <li style="margin-bottom: 0.3rem;">Corta el plátano maduro en tajadas.</li>
+                                <li style="margin-bottom: 0.3rem;">Fríe hasta que estén doradas.</li>
+                            </ol>
+                        </div>
+                        <p style="color: #555; margin-top: 1rem;"><strong>Montaje:</strong> Sirve el pescado con arroz
+                            con coco, patacones o tajadas y ensalada fresca.</p>
+                    </div>
+                </div>
+
+
+                <div class="featured-info gastro-info" style="display: none;">
+                    <h3>Arepa de huevo</h3>
+                    <p>Estas arepas de maíz amarillo son fritas hasta inflar, rellenas con huevo y nuevamente doradas
+                        hasta lograr una textura crujiente por fuera y suave por dentro. Un bocado lleno de tradición y
+                        sabor auténtico.</p>
+                    <button type="button" class="btn-recipe"
+                        style="border: none; border-bottom: 4px solid #FCC940; cursor: pointer; font-size: 1rem; font-family: inherit;"
+                        onclick="const content = this.nextElementSibling; content.style.display = content.style.display === 'block' ? 'none' : 'block';">Ver
+                        Receta →</button>
+                    <div class="recipe-content"
+                        style="display: none; margin-top: 1.5rem; text-align: left; background: rgba(0,0,0,0.03); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #FCC940;">
+                        <h4 style="margin-bottom: 0.5rem; color: #1D2319;">Ingredientes</h4>
+                        <ul style="margin-bottom: 1rem; padding-left: 1.5rem; color: #555;">
+                            <li>2 tazas de harina de maíz amarillo</li>
+                            <li>Agua tibia</li>
+                            <li>Sal</li>
+                            <li>4 huevos</li>
+                            <li>Aceite para freír</li>
+                        </ul>
+                        <h4 style="margin-bottom: 0.5rem; color: #1D2319;">Preparación</h4>
+                        <ol style="margin-bottom: 1rem; padding-left: 1.5rem; color: #555;">
+                            <li style="margin-bottom: 0.3rem;">Mezcla la harina con agua y sal hasta formar una masa
+                                suave.</li>
+                            <li style="margin-bottom: 0.3rem;">Forma bolas y aplástalas (tipo arepa gruesa).</li>
+                            <li style="margin-bottom: 0.3rem;">Fríelas en aceite hasta que inflen un poco.</li>
+                            <li style="margin-bottom: 0.3rem;">Sácalas, ábrelas con cuidado y agrega un huevo crudo
+                                dentro.</li>
+                            <li>Vuelve a freír hasta que el huevo se cocine y queden bien doradas.</li>
+                        </ol>
+                        <p style="margin-top: 0.8rem; font-size: 0.9em; color: #FCC940;"><em>💡 Tip tradicional: algunas
+                                versiones llevan carne molida dentro.</em></p>
+                    </div>
+                </div>
+
+
+                <div class="featured-info gastro-info" style="display: none;">
+                    <h3>Patacones con queso fresco</h3>
+                    <p>Crujientes discos de plátano verde doblemente fritos, dorados a la perfección, con un interior
+                        suave y un exterior crocante. Acompañados de queso costeño fresco que aporta un contraste salado
+                        y cremoso, evocando los sabores tradicionales.</p>
+                    <button type="button" class="btn-recipe"
+                        style="border: none; border-bottom: 4px solid #FCC940; cursor: pointer; font-size: 1rem; font-family: inherit;"
+                        onclick="const content = this.nextElementSibling; content.style.display = content.style.display === 'block' ? 'none' : 'block';">Ver
+                        Receta →</button>
+                    <div class="recipe-content"
+                        style="display: none; margin-top: 1.5rem; text-align: left; background: rgba(0,0,0,0.03); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #FCC940;">
+                        <h4 style="margin-bottom: 0.5rem; color: #1D2319;"> Ingredientes</h4>
+                        <ul style="margin-bottom: 1rem; padding-left: 1.5rem; color: #555;">
+                            <li>Plátanos verdes</li>
+                            <li>Aceite para freír</li>
+                            <li>Sal</li>
+                            <li>Queso costeño</li>
+                        </ul>
+                        <h4 style="margin-bottom: 0.5rem; color: #1D2319;">Preparación</h4>
+                        <ol style="margin-bottom: 1rem; padding-left: 1.5rem; color: #555;">
+                            <li style="margin-bottom: 0.3rem;">Pela los plátanos y córtalos en trozos gruesos.</li>
+                            <li style="margin-bottom: 0.3rem;">Fríelos en aceite caliente por unos 3–4 minutos (primera
+                                fritura).</li>
+                            <li style="margin-bottom: 0.3rem;">Sácalas y aplástalas con una tabla o vaso.</li>
+                            <li style="margin-bottom: 0.3rem;">Vuelve a freírlos hasta que queden dorados y crujientes.
+                            </li>
+                            <li>Agrégales sal al gusto.</li>
+                            s hasta que queden dorados y crujientes.</li>
+                            <li>Agrégales sal al gusto.</li>
+                        </ol>
+                        <p style="color: #555;">Sirve con trozos de queso costeño encima o al lado.</p>
+                        <p style="margin-top: 0.8rem; font-size: 0.9em; color: #FCC940;"><em>💡 Tip palenquero: a veces
+                                les ponen suero costeño o ajito machacado.</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2CATEGORIA -->
+            <div class="category-row">
+                <div class="category-box">
+                    <div class="icon" style="font-size: 2rem;"></div>
+                    <h4>Ingredientes Ancestrales</h4>
+                    <p>Explora los ingredientes que han sido la base o complemento en la cocina palenquera a lo largo de
+                        los años.</p>
+                    <a href="#" id="open-ingredients" class="btn-recipe"
+                        style="padding: 0.4rem 1rem; font-size: 0.8rem;">Explorar</a>
+                </div>
+
+
+
+
+                <div class="category-box">
+                    <div class="icon" style="font-size: 2rem;"></div>
+                    <h4>Dulces tradicionales</h4>
+                    <p>Explora algunos de los dulces tradicionales de Palenque que han acompañado las fiestas y
+                        celebraciones a lo largo de los años.</p>
+                    <a href="#" id="open-sweets" class="btn-recipe"
+                        style="padding: 0.4rem 1rem; font-size: 0.8rem;">Explorar</a>
+                </div>
+                <div class="category-box">
+                    <div class="icon" style="font-size: 2rem;"></div>
+                    <h4>Platos Típicos</h4>
+                    <p>Explora algunos de los platos típicos de Palenque que han acompañado la historia y cultura a lo
+                        largo de los años.</p>
+                    <a href="#" id="open-dishes" class="btn-recipe"
+                        style="padding: 0.4rem 1rem; font-size: 0.8rem;">Explorar</a>
+                </div>
+            </div>
+
+            <!-- Galería al pié -->
+            <h3
+                style="font-family: 'Playfair Display', serif; text-align: center; margin-bottom: 1.5rem; color: #0b1d2e;">
+                GALERÍA CULINARIA</h3>
+            <div class="gallery-viewport">
+                <div class="ancestral-gallery premium-img-effect" id="gallery-carousel-track">
+                    <!-- Platos -->
+                    <div class="gallery-item">
+                        <img src="imagenes/Plato tradicional colombiano en hoja de plátano.png" alt="Plato Tradicional">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/Arepas de huevo con bebidas frías.png" alt="Arepas de Huevo">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/Patacones con queso fresco.png" alt="Patacones">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/platos tipicos/encocado de pescado.jpg" alt="Encocado de Pescado">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/platos tipicos/mote de bagre.jpg" alt="Mote de Bagre">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/platos tipicos/majuana.png" alt="Majuana">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/platos tipicos/arroz con quelonios.jpg" alt="Arroz típico">
+                    </div>
+                    <!-- Dulces -->
+                    <div class="gallery-item">
+                        <img src="imagenes/dulces/alegria.jpg" alt="Alegría">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/dulces/cocadas.png" alt="Cocada">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/dulces/enyucado.jpg" alt="Enyucado">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/dulces/caballitos.jpg" alt="Caballito">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/dulces/bolas de mani.jpg" alt="Dulces de Maní">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/dulces/panelitas.jpg" alt="Panelitas">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/dulces/tamarindo dulce.png" alt="Dulce de Tamarindo">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/dulces/arroz con coco.jpeg" alt="Arroz con coco">
+                    </div>
+                    <!-- Ingredientes -->
+                    <div class="gallery-item">
+                        <img src="imagenes/ingredientes/coco.jpg" alt="Coco">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/ingredientes/maiz.jpg" alt="Maíz">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/ingredientes/yuca.jpg" alt="Yuca">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/ingredientes/tamarindo.jpg" alt="Tamarindo">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/ingredientes/melao de panela.jpg" alt="Melao de Panela">
+                    </div>
+                </div>
+                <!-- Gallery Navigation -->
+                <button class="carousel-btn carousel-prev" id="gallery-prev" style="position: absolute; left: 10px;"></button>
+                <button class="carousel-btn carousel-next" id="gallery-next" style="position: absolute; right: 10px;"></button>
+            </div>
+
+        </div>
+
+        <a href="index.html" class="back-link" style="border-color: white; color: white;">← VOLVER AL INICIO</a>
+        <section class="image-copyright-notice animate-on-scroll">
+            <p><strong>Derechos de Autor:</strong> Las imágenes de esta sección han sido obtenidas de <i>Pinterest</i> y <i>Google Imágenes</i> con fines netamente ilustrativos y para la preservación cultural del patrimonio palenquero.</p>
+        </section>
+    </main>
+
+    <!-- Modal de Ingredientes -->
+    <div id="ingredients-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2 class="modal-title">INGREDIENTES ANCESTRALES</h2>
+            <div class="decorative-line"></div>
+
+            <div class="ingredients-grid">
+                <!-- Coco -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/ingredientes/coco.jpg" alt="Coco">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Coco</h3>
+                        <p>El coco es uno de los ingredientes más importantes del Caribe. En Palenque, no solo se
+                            utiliza por su sabor, sino por su versatilidad: de él se obtiene leche, aceite y base para
+                            dulces.</p>
+                        <p>Es un fruto tropical con cáscara dura y pulpa blanca rica en grasas naturales.</p>
+                    </div>
+                </div>
+
+
+                <!-- Yuca -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/ingredientes/yuca.jpg" alt="Yuca">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Yuca</h3>
+                        <p>La yuca es un alimento ancestral heredado de los pueblos indígenas. Su facilidad de cultivo
+                            la convirtió en un recurso clave para la supervivencia.</p>
+                        <p>Es una Raíz rica en almidón, de textura firme y sabor neutro.</p>
+                    </div>
+                </div>
+
+
+                <!-- Ñame -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/ingredientes/ñame.jpg" alt="Ñame">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Ñame</h3>
+                        <p>El ñame tiene origen africano y llegó a América con las comunidades afrodescendientes. Su
+                            presencia en la cocina palenquera mantiene ese vínculo histórico.</p>
+                        <p>Es un Tubérculo de pulpa suave, similar a la yuca pero más húmedo.</p>
+                    </div>
+                </div>
+
+
+                <!-- Maiz -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/ingredientes/maiz.jpg" alt="Maiz">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Maiz</h3>
+                        <p>El maíz es símbolo de vida en América. En Palenque, este grano ancestral se transforma en
+                            preparaciones que conectan el pasado indígena con el presente cultural.</p>
+                    </div>
+                </div>
+
+
+                <!-- Zarandaja -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/ingredientes/zarandaja.jpg" alt="Zarandaja">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Zarandaja</h3>
+                        <p>La zarandaja es un ingrediente humilde pero esencial. En las recetas tradicionales, aporta
+                            sustento y refleja la conexión con la tierra del Caribe.</p>
+                        <p>Es un tipo de grano parecido al frijol o la arveja, generalmente de color claro aunque puede
+                            variar.</p>
+                    </div>
+                </div>
+
+
+                <!-- Bleo -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/ingredientes/bleo.png" alt="Bleo">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Bleo</h3>
+                        <p>Es conocimiento ancestral hecho ingrediente. Aunque poco conocido fuera de la región, ha sido
+                            durante generaciones una base en la cocina tradicional.</p>
+                        <p>Es una planta de hojas verdes comestibles, parecida a la espinaca. Crece de forma silvestre o
+                            en huertas caseras en zonas cálidas como San Basilio de Palenque.</p>
+                    </div>
+                </div>
+
+
+                <!-- Tamarindo -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/ingredientes/tamarindo.jpg" alt="Tamarindo">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Tamarindo</h3>
+                        <p>Entre lo ácido y lo dulce, el tamarindo aporta contraste y carácter. Su uso en la gastronomía
+                            refleja la diversidad de sabores que definen la identidad palenquera.</p>
+                        <p>Es el fruto de un árbol llamado tamarindo. Crece en vainas alargadas (como una cáscara), y
+                            dentro tiene una pulpa marrón oscura que es la parte comestible.</p>
+                    </div>
+                </div>
+
+
+                <!-- Plátano -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/ingredientes/Plátano.jpg" alt="Plátano">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Plátano</h3>
+                        <p>Versátil y cotidiano, el plátano es parte fundamental de la vida en Palenque. Su presencia
+                            constante en la cocina habla de adaptación y riqueza cultural.</p>
+                    </div>
+                </div>
+
+
+                <!-- Melao de Panela -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/ingredientes/melao de panela.jpg" alt="Melao de Panela">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Melao de Panela</h3>
+                        <p>Espeso, dulce y lleno de historia, el melao de panela representa la tradición del fuego
+                            lento. Es el corazón de los dulces que han pasado de generación en generación.</p>
+                        <p>Es un jarabe espeso y dulce que se obtiene al derretir y cocinar la panela con agua hasta
+                            formar una miel oscura y brillante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal de Dulces -->
+    <div id="sweets-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2 class="modal-title">DULCES TRADICIONALES</h2>
+            <div class="decorative-line"></div>
+
+            <div class="ingredients-grid">
+                <!-- Alegría -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/dulces/alegria.jpg"
+                            alt="Alegría">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Alegría</h3>
+                        <p>Barras o bolitas crujientes hechas con granos inflados y miel.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Receta: Alegría</h4>
+                        <p><strong>Ingredientes:</strong>
+                        <ul style="text-align: left; margin-bottom: 0.5rem;">
+                            <li>2 tazas de millo inflado</li>
+                            <li>1 taza de melao de panela</li>
+                        </ul>
+                        </p>
+                        <p><strong>Preparación:</strong>
+                        <ul style="text-align: left;">
+                            <li>Ten el millo listo en un bowl grande.</li>
+                            <li>Calienta el melao hasta que esté bien líquido y caliente.</li>
+                            <li>Vierte rápidamente sobre el millo.</li>
+                            <li>Mezcla de inmediato (se endurece rápido).</li>
+                            <li>Pasa a un molde engrasado y presiona.</li>
+                            <li>Corta en barras antes de que enfríe totalmente.</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cocadas -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/dulces/cocadas.png"
+                            alt="Cocada">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Cocada</h3>
+                        <p>Las cocadas representan el uso del coco como ingrediente central del Caribe. Son un dulce cotidiano, presente tanto en la vida diaria como en celebraciones.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Receta: Cocada</h4>
+                        <p><strong>Ingredientes:</strong>
+                        <ul style="text-align: left; margin-bottom: 0.5rem;">
+                            <li>2 tazas de coco fresco rallado</li>
+                            <li>1 taza de panela rallada (o ¾ taza azúcar)</li>
+                            <li>½ taza de agua</li>
+                            <li>1 pizca de sal (opcional)</li>
+                        </ul>
+                        </p>
+                        <p><strong>Preparación:</strong>
+                        <ul style="text-align: left;">
+                            <li>En una olla, derrite la panela con el agua a fuego medio.</li>
+                            <li>Cocina hasta obtener un melao espeso (5–8 min).</li>
+                            <li>Agrega el coco rallado y mezcla bien.</li>
+                            <li>Cocina a fuego bajo 10–15 min, revolviendo sin parar.</li>
+                            <li>Cuando la mezcla esté espesa y se despegue del fondo, retira.</li>
+                            <li>Forma montoncitos con cuchara sobre una bandeja.</li>
+                            <li>Deja enfriar hasta que endurezcan. </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Caballito -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/dulces/caballitos.jpg" alt="Caballito">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Caballito</h3>
+                        <p>Tiras dulces de papaya, brillantes y suaves.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Receta: Caballito</h4>
+                        <p><strong>Ingredientes:</strong></p>
+                        <ul style="text-align: left; margin-bottom: 0.5rem;">
+                            <li>1 papaya verde mediana</li>
+                            <li>1 taza de azúcar o panela</li>
+                            <li>1 rama de canela</li>
+                            <li>½ taza de agua</li>
+                        </ul>
+                        <p><strong>Preparación:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>Pela y corta la papaya en tiras.</li>
+                            <li>Cocina con agua, azúcar y canela a fuego medio.</li>
+                            <li>Revuelve constantemente durante 30–40 min.</li>
+                            <li>Cocina hasta que espese y brille.</li>
+                            <li>Deja enfriar.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Enyucado -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/dulces/enyucado.jpg" alt="Enyucado">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Enyucado</h3>
+                        <p>Postre húmedo, denso y ligeramente dulce.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Receta: Enyucado</h4>
+                        <p><strong>Ingredientes:</strong></p>
+                        <ul style="text-align: left; margin-bottom: 0.5rem;">
+                            <li>500 g de yuca rallada</li>
+                            <li>1 taza de coco rallado</li>
+                            <li>½ taza de queso rallado</li>
+                            <li>¾ taza de azúcar o panela</li>
+                            <li>1 cucharadita de anís</li>
+                            <li>2 cucharadas de mantequilla</li>
+                        </ul>
+                        <p><strong>Preparación:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>Precalienta el horno a 180°C.</li>
+                            <li>Mezcla todos los ingredientes en un bowl.</li>
+                            <li>Engrasa un molde y vierte la mezcla.</li>
+                            <li>Hornea durante 45–60 min.</li>
+                            <li>Retira cuando esté dorado por encima.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dulces de tamarindo -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/dulces/tamarindo dulce.png"
+                            alt="Dulces de tamarindo">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Dulces de tamarindo</h3>
+                        <p>Bolitas de sabor ácido-dulce.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Receta: Dulces de tamarindo</h4>
+                        <p><strong>Ingredientes:</strong></p>
+                        <ul style="text-align: left; margin-bottom: 0.5rem;">
+                            <li>1 taza de pulpa de tamarindo</li>
+                            <li>½ taza de azúcar</li>
+                        </ul>
+                        <p><strong>Preparación:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>Mezcla la pulpa con el azúcar.</li>
+                            <li>Cocina a fuego bajo 10 min hasta espesar.</li>
+                            <li>Deja enfriar un poco.</li>
+                            <li>Forma bolitas con las manos.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dulces de maní -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/dulces/bolas de mani.jpg"
+                            alt="Dulces de maní">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Dulces de maní</h3>
+                        <p>Dulces compactos, crocantes y nutritivos.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Receta: Dulces de maní</h4>
+                        <p><strong>Ingredientes:</strong></p>
+                        <ul style="text-align: left; margin-bottom: 0.5rem;">
+                            <li>1 taza de maní tostado y pelado</li>
+                            <li>½ taza de panela rallada</li>
+                            <li>2 cucharadas de agua</li>
+                        </ul>
+                        <p><strong>Preparación:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>Derrite la panela con agua hasta hacer melao.</li>
+                            <li>Agrega el maní.</li>
+                            <li>Mezcla bien y cocina 5 minutos.</li>
+                            <li>Vierte en superficie engrasada.</li>
+                            <li>Corta antes de que endurezca.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Panelitas -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/dulces/panelitas.jpg"
+                            alt="Panelitas">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Panelitas</h3>
+                        <p>Base de la dulcería, ligada a la caña de azúcar.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Receta: Panelitas</h4>
+                        <p><strong>Ingredientes:</strong></p>
+                        <ul style="text-align: left; margin-bottom: 0.5rem;">
+                            <li>2 tazas de panela</li>
+                            <li>1 taza de agua</li>
+                        </ul>
+                        <p><strong>Preparación:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>Cocina la panela con agua a fuego medio.</li>
+                            <li>Revuelve hasta espesar (10–15 min).</li>
+                            <li>Vierte en moldes pequeños.</li>
+                            <li>Deja enfriar hasta solidificar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Conservas de coco -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/dulces/conservadecoco.jpg"
+                            alt="Conservas de coco">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Conservas de coco</h3>
+                        <p>Dulce tradicional, mezcla perfecta de coco rallado y melao que resalta la herencia africana.
+                        </p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Receta: Conservas de coco</h4>
+                        <p><strong>Ingredientes:</strong></p>
+                        <ul style="text-align: left; margin-bottom: 0.5rem;">
+                            <li>2 tazas de coco rallado</li>
+                            <li>1 taza de melao</li>
+                        </ul>
+                        <p><strong>Preparación:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>Mezcla el coco con el melao.</li>
+                            <li>Cocina a fuego bajo durante 15–20 min.</li>
+                            <li>Revuelve constantemente.</li>
+                            <li>Retira cuando esté espeso.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Arroz de coco dulce -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/dulces/arroz con coco.jpeg"
+                            alt="Arroz de coco dulce">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Arroz de coco dulce</h3>
+                        <p>Preparación cremosa y dulce, donde el coco y la panela brillan, ideal para saborear una
+                            tradición de generaciones.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Receta: Arroz de coco dulce</h4>
+                        <p><strong>Ingredientes:</strong></p>
+                        <ul style="text-align: left; margin-bottom: 0.5rem;">
+                            <li>1 taza de arroz</li>
+                            <li>2 tazas de leche de coco</li>
+                            <li>½ taza de azúcar o panela</li>
+                            <li>1 rama de canela</li>
+                            <li>1 pizca de sal</li>
+                        </ul>
+                        <p><strong>Preparación:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>Cocina el arroz con la leche de coco.</li>
+                            <li>Añade azúcar, sal y canela.</li>
+                            <li>Cocina a fuego bajo 20–25 min.</li>
+                            <li>Revuelve hasta que espese.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Modal de Platos Típicos -->
+    <div id="dishes-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2 class="modal-title">PLATOS TÍPICOS</h2>
+            <div class="decorative-line"></div>
+
+            <div class="ingredients-grid">
+                <!-- Encocado de Pescado -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/platos tipicos/encocado de pescado.jpg" alt="Encocado de pescado">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Encocado de Pescado</h3>
+                        <p>Se caracteriza por la fuerte presencia del coco, ingrediente central en la herencia africana, y por su preparación a fuego lento.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Encocado de pescado</h4>
+                        <p><strong>Ingredientes:</strong></p>
+                        <ul>
+                            <li>Leche de coco natural</li>
+                            <li>Ají dulce, cebolla roja, cebollín</li>
+                            <li>Sal, pimienta, achiote</li>
+                            <li>Cilantro cimarrón o albahaca</li>
+                        </ul>
+                        <p><strong>Preparación:</strong></p>
+                        <ul>
+                            <li>Se prepara un refrito con cebolla, ajo, ají dulce y especias.</li>
+                            <li>Se añade la leche de coco y se cocina hasta formar una base cremosa.</li>
+                            <li>Se incorpora el pescado.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mote de bagre -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/platos tipicos/mote de bagre.jpg" alt="Mote de bagre">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Mote de bagre</h3>
+                        <p>Sopa tradicional del Caribe colombiano, esencial en Semana Santa, a base de ñame y espesa consistencia.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Mote de bagre</h4>
+                        <p><strong>Preparación Clave:</strong></p>
+                        <ul>
+                            <li>Hervir ñame espina en agua y triturar ligeramente.</li>
+                            <li>Preparar un refrito de ají dulce, ajo, y limón.</li>
+                            <li>Añadir el bagre en postas y cocinar a fuego lento.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Arroz con quelonios -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/platos tipicos/arroz con quelonios.jpg" alt="Arroz con quelonios">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Arroz típico</h3>
+                        <p>Arroz cocinado con leche de coco y un guiso intenso lleno de especias y sabor profundo tradicional.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Arroz Ancestral</h4>
+                        <ul>
+                            <li>Refrito con achiote y cebollín.</li>
+                            <li>Leche de coco espesa cocida con la proteína base.</li>
+                            <li>Incorporar el arroz y dejar consumir.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Celele -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/platos tipicos/bagre ahumado.jpg" alt="Celele de bagre ahumado">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Celele de Bagre</h3>
+                        <p>Guiso espeso donde el pescado se cocina con abundante coco y tubérculos (ñame y plátano) hasta integrarse.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Celele ahumado</h4>
+                        <ul>
+                            <li>Cocinar ñame y plátano en trozos.</li>
+                            <li>Usar segunda leche de coco y espesar con la primera.</li>
+                            <li>Integrar el pescado ahumado suavemente.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Majuana -->
+                <div class="ingredient-card">
+                    <div class="ing-img-box">
+                        <img src="imagenes/platos tipicos/majuana.png" alt="Majuana">
+                    </div>
+                    <div class="ing-info">
+                        <h3>Majuana</h3>
+                        <p>Poderoso alimento de luto. Frijol gandul preparado colectivamente para acompañar y sanar a la comunidad.</p>
+                        <button class="btn-small-order" onclick="this.parentElement.nextElementSibling.classList.toggle('active')" style="margin-top: 1rem;">Ver Receta</button>
+                    </div>
+                    <div class="bento-recipe-overlay">
+                        <button class="close-modal-inside" onclick="this.parentElement.classList.remove('active')" style="background:transparent; border:none; font-size:2rem; position:absolute; top:10px; right:15px; color:#FCC940; cursor:pointer;">&times;</button>
+                        <h4>Plato Colectivo</h4>
+                        <ul>
+                            <li>Agua con frijol gandul hasta ablandar.</li>
+                            <li>Añadir yuca, tubérculos y hojas de bleo silvestre.</li>
+                            <li>Agregar opcionalmente pescado y revolver mienstras canta lumbalú.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modals = [
+                { openBtn: 'open-ingredients', modalId: 'ingredients-modal' },
+                { openBtn: 'open-sweets', modalId: 'sweets-modal' },
+                { openBtn: 'open-dishes', modalId: 'dishes-modal' }
+            ];
+
+            modals.forEach(item => {
+                const openModalBtn = document.getElementById(item.openBtn);
+                const modal = document.getElementById(item.modalId);
+
+                if (openModalBtn && modal) {
+                    const closeBtns = modal.querySelectorAll('.close-modal');
+
+                    openModalBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        modal.classList.add('active');
+                        document.body.classList.add('modal-open');
+                    });
+
+                    const closeModal = () => {
+                        modal.classList.remove('active');
+                        document.body.classList.remove('modal-open');
+                    };
+
+                    closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+
+                    modal.addEventListener('click', (e) => {
+                        if (e.target === modal) {
+                            closeModal();
+                        }
+                    });
+
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape' && modal.classList.contains('active')) {
+                            closeModal();
+                        }
+                    });
+                }
+            });
+
+            // CAROUSEL: Plato Principal
+            const carousel = document.getElementById('gastronomy-carousel');
+            if (carousel) {
+                const track = carousel.querySelector('.carousel-track');
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                const dots = carousel.querySelectorAll('.carousel-dot');
+                const prevBtn = carousel.querySelector('.carousel-prev');
+                const nextBtn = carousel.querySelector('.carousel-next');
+                const recipeInfos = document.querySelectorAll('.gastro-info');
+                let current = 0;
+
+                function goTo(index) {
+                    // Wrap around
+                    current = (index + slides.length) % slides.length;
+
+                    // Move track
+                    track.style.transform = `translateX(-${current * 100}%)`;
+
+                    // Update dots
+                    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+
+                    // Sync recipe info panels
+                    recipeInfos.forEach((info, i) => {
+                        info.style.display = i === current ? 'flex' : 'none';
+                    });
+                }
+
+                prevBtn.addEventListener('click', () => goTo(current - 1));
+                nextBtn.addEventListener('click', () => goTo(current + 1));
+
+                dots.forEach((dot, i) => {
+                    dot.addEventListener('click', () => goTo(i));
+                });
+
+                // Auto-play every 5 seconds
+                let autoplay = setInterval(() => goTo(current + 1), 5000);
+
+                // Pause on hover
+                carousel.addEventListener('mouseenter', () => clearInterval(autoplay));
+                carousel.addEventListener('mouseleave', () => {
+                    autoplay = setInterval(() => goTo(current + 1), 5000);
+                });
+
+                // Initialize
+                goTo(0);
+            }
+
+            // GALLERY CAROUSEL: Galería Culinaria
+            const galleryTrack = document.getElementById('gallery-carousel-track');
+            const galleryPrev = document.getElementById('gallery-prev');
+            const galleryNext = document.getElementById('gallery-next');
+            
+            if (galleryTrack && galleryPrev && galleryNext) {
+                let scrollAmount = 0;
+                
+                function getMetrics() {
+                    const firstItem = galleryTrack.querySelector('.gallery-item');
+                    const itemWidth = firstItem ? firstItem.offsetWidth + 24 : 0;
+                    const maxScroll = galleryTrack.scrollWidth - galleryTrack.parentElement.offsetWidth;
+                    return { itemWidth, maxScroll };
+                }
+
+                function moveGallery(direction) {
+                    const { itemWidth, maxScroll } = getMetrics();
+                    if (itemWidth === 0) return;
+
+                    if (direction === 'next') {
+                        scrollAmount += itemWidth;
+                        if (scrollAmount > maxScroll + 10) scrollAmount = 0; 
+                    } else {
+                        scrollAmount -= itemWidth;
+                        if (scrollAmount < -10) scrollAmount = maxScroll; 
+                    }
+                    galleryTrack.style.transform = `translateX(-${scrollAmount}px)`;
+                }
+
+                galleryNext.addEventListener('click', () => {
+                    clearInterval(galleryAuto);
+                    moveGallery('next');
+                });
+                galleryPrev.addEventListener('click', () => {
+                    clearInterval(galleryAuto);
+                    moveGallery('prev');
+                });
+
+                // Auto-play for gallery
+                let galleryAuto = setInterval(() => moveGallery('next'), 3000);
+
+                // Pause on hover
+                const viewport = galleryTrack.parentElement;
+                viewport.addEventListener('mouseenter', () => clearInterval(galleryAuto));
+                viewport.addEventListener('mouseleave', () => {
+                    clearInterval(galleryAuto);
+                    galleryAuto = setInterval(() => moveGallery('next'), 3000);
+                });
+
+                // Window Resize
+                window.addEventListener('resize', () => {
+                    scrollAmount = 0; // Reset scroll on resize to avoid position issues
+                    galleryTrack.style.transform = `translateX(0)`;
+                });
+            }
+        });
+    </script>
+    <script src="javascript.js"></script>
+</body>
+
+</html>

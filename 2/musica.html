@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música - ECOS DE PALENQUE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="music-dark-page">
+    <!-- PANEL LATERAL (VENTANA AZUL) -->
+    <div class="panel" id="panel">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
+                <li><a href="editorial.html">EDITORIAL</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li><a href="actividades.html">ACTIVIDADES</a></li>
+                <li><a href="explora.html">EXPLORAR</a></li>
+                <li><a href="cartografia.html">CARTOGRAFÍA</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header-principal subpage-header">
+        <div class="header-brand">
+            <a href="index.html" class="ecos-palenque" style="text-decoration: none;">ECOS DE PALENQUE</a>
+        </div>
+        <div class="header-right-side">
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="historia.html">HISTORIA</a></li>
+                    <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                    <li><a href="musica.html">MÚSICA</a></li>
+                    <li><a href="editorial.html">EDITORIAL</a></li>
+                    <li><a href="galeria.html">GALERÍA</a></li>
+                </ul>
+            </nav>
+            <!-- BOTÓN HAMBURGUESA INTEGRADO -->
+            <div id="btnMenu" class="hamburguesa-header">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <!-- HERO SECTION WITH MAIN TITLE OVER PHOTO -->
+        <section class="oraz-hero">
+            <div class="oraz-hero-content" style="text-align: left; max-width: 1000px; position: relative; z-index: 1000; padding-left: 5%;">
+                <span style="font-family: 'belle', cursive; color: #FCC940; font-size: 2.5rem; display: block; margin-bottom: -10px; transform: rotate(-2deg); text-shadow: 2px 2px 10px rgba(0,0,0,0.5); width: fit-content;">La Herencia de la</span>
+                <div id="main-hero-title" style="font-family: 'bixton', sans-serif; font-size: 8rem; color: #ffffff !important; letter-spacing: 12px; margin: 10px 0; text-shadow: 4px 4px 30px rgba(0,0,0,0.9); display: block !important; opacity: 1 !important; visibility: visible !important; line-height: 1;">MÚSICA</div>
+                <div style="width: 180px; height: 3px; background: #FCC940; margin: 2rem 0; box-shadow: 0 0 20px rgba(252, 201, 64,1);"></div>
+                <p style="font-family: 'caramella', sans-serif; color: #f1ebd8; letter-spacing: 5px; text-transform: uppercase; font-size: 1.2rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); max-width: 600px;">Sonidos Ancestrales de San Basilio de Palenque</p>
+            </div>
+        </section>
+        <section class="oraz-section" style="padding-top: 0; position: relative; overflow: hidden;">
+            <!-- DECORATIVE SVG LINE -->
+            <svg class="graphic-stroke" width="400" height="200" style="top: 100px; right: -50px;">
+                <path d="M0,150 Q100,50 400,100" />
+            </svg>
+
+        <div style="text-align: center; padding: 4rem 0 2rem; position: relative; z-index: 20;">
+            <h2 class="oraz-section-title animate-on-scroll" style="color: #FCC940; opacity: 1; transform: none;">
+                Últimos <span>Artistas</span>
+            </h2>
+            <p class="animate-on-scroll" style="color: #a0a0b0; max-width: 700px; margin: 1rem auto 0; font-size: 1.1rem; line-height: 1.6; opacity: 1;">
+                Un recorrido por las nuevas voces y los ritmos que mantienen viva la herencia sonora de nuestro pueblo.
+            </p>
+        </div>
+            <div class="oraz-songs-grid">
+                <div class="oraz-song-card tilt-card animate-on-scroll">
+                    <div class="tilt-card-inner">
+                        <div class="oraz-song-img-wrapper editorial-frame">
+                            <img src="imagenes/afroneto.png" alt="Nu Má Apatei" class="premium-img-effect">
+                            <div class="oraz-song-play pulse js-music-btn" data-audio-id="audio-1">▶</div>
+                            <video id="audio-1" src="music/afroneto%20nu%20m%C3%A1%20apatei%20afroneto.mp4" preload="auto" playsinline webkit-playsinline style="display:none;"></video>
+                        </div>
+                        <h4>Nu Má Apatei</h4>
+                        <p>Afroneto</p>
+                    </div>
+                </div>
+                <div class="oraz-song-card tilt-card animate-on-scroll">
+                    <div class="tilt-card-inner">
+                        <div class="oraz-song-img-wrapper editorial-frame">
+                            <img src="imagenes/kombilesa mi.png" alt="Endi Loyo" class="premium-img-effect">
+                            <div class="oraz-song-play pulse js-music-btn" data-audio-id="audio-2">▶</div>
+                            <video id="audio-2" src="music/endi%20loyo%20kombilesa%20mi.mp4" preload="auto" playsinline webkit-playsinline style="display:none;"></video>
+                        </div>
+                        <h4>Endi Loyo</h4>
+                        <p>Kombilesa Mí</p>
+                    </div>
+                </div>
+                <div class="oraz-song-card tilt-card animate-on-scroll">
+                    <div class="tilt-card-inner">
+                        <div class="oraz-song-img-wrapper editorial-frame">
+                            <img src="imagenes/kombilesa mi.png" alt="Los Peinados" class="premium-img-effect">
+                            <div class="oraz-song-play pulse js-music-btn" data-audio-id="audio-3">▶</div>
+                            <video id="audio-3" src="music/los%20peinadoskombilesa%20mi.mp4" preload="auto" playsinline webkit-playsinline style="display:none;"></video>
+                        </div>
+                        <h4>Los Peinados</h4>
+                        <p>Kombilesa Mí</p>
+                    </div>
+                </div>
+                <div class="oraz-song-card tilt-card animate-on-scroll">
+                    <div class="tilt-card-inner">
+                        <div class="oraz-song-img-wrapper editorial-frame">
+                            <img src="imagenes/kombilesa mi.png" alt="Ma Kuagro" class="premium-img-effect">
+                            <div class="oraz-song-play pulse js-music-btn" data-audio-id="audio-4">▶</div>
+                            <video id="audio-4" src="music/ma%20kuagro%20kombilesa%20mi.mp4" preload="auto" playsinline webkit-playsinline style="display:none;"></video>
+                        </div>
+                        <h4>Ma Kuagro</h4>
+                        <p>Kombilesa Mí</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN MUSIC CONTENT (RECTANGLE CONTAINER) -->
+        <div class="music-main-wrapper stagger-reveal">
+            <div class="oraz-split-section">
+                <!-- SPOTIFY PLAYLIST -->
+                <div>
+                    <h2 class="oraz-section-title animate-on-scroll">Playlist <span>Oficial</span></h2>
+                    <div class="animate-on-scroll" style="margin-top: 1rem; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.15);">
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1SJvIpP34SQXKYCZgwk6rC?utm_source=generator" width="100%" height="720" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- PODCAST EPISODES -->
+                <div>
+                    <h2 class="oraz-section-title animate-on-scroll">PODCAST </h2>
+                    <div class="animate-on-scroll" style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem;">
+                        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/3oC4mMcjXc56AnBzidoE7u?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/5lCZIjnMGlv2qqXkFeLdCy?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BACK TO DARK -->
+        <section class="oraz-section" style="padding-top: 4rem;">
+            <h2 class="oraz-section-title animate-on-scroll">Contenido <span>Destacado</span></h2>
+            <div class="animate-on-scroll" style="margin-top: 2rem;">
+                <iframe style="border-radius:12px; box-shadow: 0 20px 60px rgba(0,0,0,0.6);" width="100%" height="550" src="https://www.youtube.com/embed/lQtKOkys_z8?si=MYYjXt6Up--yxNvn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- ORAZ FOOTER -->
+        <footer class="oraz-footer">
+            <div class="oraz-footer-top">
+                <!-- Brand Col -->
+                <div class="oraz-footer-brand">
+                    <h2>ECOS <span>DE PALENQUE</span></h2>
+                    <p>Un espacio dedicado a la preservación y difusión de la cultura, historia y sonido de San Basilio de Palenque, el primer pueblo libre de América. Acompáñanos a descubrir nuestros ritmos ancestrales.</p>
+                    <div class="oraz-social-icons">
+                        <a href="#" class="fb">f</a>
+                        <a href="#" class="tw">t</a>
+                        <a href="#" class="ig">ig</a>
+                        <a href="#" class="yt">yt</a>
+                    </div>
+                </div>
+                
+                <!-- Links Col -->
+                <div class="oraz-footer-col">
+                    <h3>Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="historia.html">Nuestra Historia</a></li>
+                        <li><a href="gastronomia.html">Gastronomía</a></li>
+                        <li><a href="galeria.html">Galería Visual</a></li>
+                        <li><a href="editorial.html">Editorial</a></li>
+                    </ul>
+                </div>
+
+                <!-- Genres Col -->
+                <div class="oraz-footer-col">
+                    <h3>Ritmos</h3>
+                    <ul>
+                        <li><a href="#">Bullerengue</a></li>
+                        <li><a href="#">Mapalé</a></li>
+                        <li><a href="#">Son Palenquero</a></li>
+                        <li><a href="#">Chalupa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Col -->
+                <div class="oraz-footer-col">
+                    <h3>Contáctanos</h3>
+                    <div class="oraz-contact-info">
+                        <p><strong>Ubicación:</strong> San Basilio de Palenque, Mahates, Bolívar, Colombia</p>
+                        <p><strong>Teléfono:</strong> +57 300 000 0000</p>
+                        <p><strong>Email:</strong> contacto@ecosdepalenque.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="oraz-footer-bottom">
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <div>© Copyright 2026, Ecos de Palenque. Todos los derechos reservados.</div>
+                    <div style="font-family: 'caramella'; font-size: 8pt; color: rgba(253, 213, 163, 0.4); text-transform: uppercase; letter-spacing: 1px;">
+                        Contenido de audio y video proporcionado por &copy; Spotify y &copy; YouTube
+                    </div>
+                </div>
+                <a href="index.html" class="center-logo">Volver al Inicio</a>
+                <div class="oraz-footer-links">
+                    <a href="#">Términos de Uso</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>

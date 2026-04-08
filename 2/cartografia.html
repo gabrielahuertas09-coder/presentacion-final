@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartografía - ECOS DE PALENQUE</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ── PAGE BASE ─────────────────────────────────── */
+        .carto-page {
+            background-color: #1D2319;
+            min-height: 100vh;
+            padding: 3rem 5% 4rem;
+            color: #F3F2C3;
+        }
+
+        .carto-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .carto-subtitle {
+            color: rgba(252,213,163,0.75);
+            font-size: 1rem;
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ── SCENE WRAPPER ──────────────────────────────── */
+        .carto-scene {
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+            background: rgba(11,29,46,0.5);
+            border: 1px solid rgba(229,159,32,0.3);
+            border-radius: 16px;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        /* ── LEGEND PILL ────────────────────────────────── */
+        .carto-legend {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: rgba(252,213,163,0.7);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .base-dot { background: #FCC940; }
+
+        .overlay-dot {
+            background: transparent;
+            border: 2px solid rgba(252,213,163,0.5);
+            transition: background 0.3s;
+        }
+
+        .overlay-dot.active { background: #F3F2C3; border-color: #F3F2C3; }
+
+        .legend-sep { opacity: 0.4; }
+
+        /* ── MAP STAGE (stacked images) ─────────────────── */
+        .carto-stage {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #0a1a25;
+        }
+
+        /* Base map — always fully visible */
+        .carto-base {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center 55%;
+            display: block;
+            z-index: 1;
+        }
+
+        /* Overlay map — 40% opacity by default, full when .visible */
+        .carto-overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center 55%; /* Sube la imagen */
+            display: block;
+            z-index: 2;
+            opacity: 1;
+            filter: brightness(1.1) contrast(1.1); /* Efecto opacidad/intensidad */
+            transition: opacity 0.8s ease;
+            pointer-events: none;
+        }
+
+        .carto-overlay.visible {
+            opacity: 1;
+        }
+
+        /* ── CORNER FOLD HINT ───────────────────────────── */
+        .carto-corner-hint {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .corner-fold {
+            position: absolute;
+            bottom: 0; right: 0;
+            width: 0; height: 0;
+            border-style: solid;
+            border-width: 0 0 60px 60px;
+            border-color: transparent transparent rgba(229,159,32,0.8) transparent;
+            transition: border-width 0.3s;
+        }
+
+        .carto-corner-hint:hover .corner-fold,
+        .carto-corner-hint.open .corner-fold {
+            border-width: 0 0 70px 70px;
+            border-bottom-color: #FCC940;
+        }
+
+        .corner-label {
+            position: absolute;
+            bottom: 8px;
+            right: 6px;
+            font-size: 0.6rem;
+            color: #1D2319;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            z-index: 11;
+        }
+
+        /* ── CONTROLS ───────────────────────────────────── */
+        .carto-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+        }
+
+        .carto-toggle-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            border: 2px solid #FCC940;
+            color: #FCC940;
+            padding: 0.65rem 1.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+            font-family: inherit;
+        }
+
+        .carto-toggle-btn:hover {
+            background: #FCC940;
+            color: #1D2319;
+            transform: scale(1.04);
+        }
+
+        .carto-toggle-btn.active {
+            background: rgba(229,159,32,0.15);
+            border-color: #F3F2C3;
+            color: #F3F2C3;
+        }
+
+        .carto-btn-icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        .carto-hint-text {
+            font-size: 0.75rem;
+            color: rgba(252,213,163,0.5);
+            text-align: center;
+        }
+
+        /* ── INFO CARDS ─────────────────────────────────── */
+        .carto-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto 2rem;
+        }
+
+        @media (max-width: 800px) {
+            .carto-info-grid { grid-template-columns: 1fr; }
+        }
+
+        .carto-info-card {
+            background: rgba(11,29,46,0.6);
+            border: 1px solid rgba(229,159,32,0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .carto-info-card:hover {
+            border-color: #FCC940;
+            transform: translateY(-4px);
+        }
+
+        .carto-info-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .carto-info-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #FCC940;
+            margin-bottom: 0.5rem;
+        }
+
+        .carto-info-card p {
+            font-size: 0.85rem;
+            color: rgba(252,213,163,0.75);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PANEL LATERAL (VENTANA AZUL) -->
+    <div class="panel" id="panel">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
+                <li><a href="editorial.html">EDITORIAL</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li><a href="actividades.html">ACTIVIDADES</a></li>
+                <li><a href="explora.html">EXPLORAR</a></li>
+                <li><a href="cartografia.html">CARTOGRAFÍA</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header-principal subpage-header">
+        <div class="header-brand">
+            <a href="index.html" class="ecos-palenque" style="text-decoration: none;">ECOS DE PALENQUE</a>
+        </div>
+        <div class="header-right-side">
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="historia.html">HISTORIA</a></li>
+                    <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                    <li><a href="musica.html">MÚSICA</a></li>
+                    <li><a href="editorial.html">EDITORIAL</a></li>
+                    <li><a href="galeria.html">GALERÍA</a></li>
+                </ul>
+            </nav>
+            <!-- BOTÓN HAMBURGUESA INTEGRADO -->
+            <div id="btnMenu" class="hamburguesa-header">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container carto-page">
+
+        <!-- Header Section -->
+        <div class="carto-header">
+            <h1 class="section-title animate-on-scroll" style="color: #FCC940;">Cartografía</h1>
+            <p class="carto-subtitle">Descubre la geografía y el territorio de San Basilio de Palenque a través de sus mapas históricos. Activa la superposición para revelar el trazado original.</p>
+        </div>
+
+        <!-- Map Section -->
+        <div class="carto-scene animate-on-scroll premium-img-effect">
+
+            <!-- Legend/Status Pill -->
+            <div class="carto-legend">
+                <span class="legend-dot base-dot"></span> Mapa Base
+                <span class="legend-sep">|</span>
+                <span class="legend-dot overlay-dot" id="overlay-legend-dot"></span>
+                <span id="overlay-legend-text">Superposición: Oculta</span>
+            </div>
+
+            <!-- Map Stage: layered images -->
+            <div class="carto-stage">
+                <!-- Base map (always visible) -->
+                <img src="imagenes/cartografia3.png" alt="Mapa cartográfico base de Palenque" class="carto-base">
+
+                <!-- Overlay map (parchment layer, toggleable) -->
+                <img src="imagenes/mapapng.png" alt="Cartografía histórica de Palenque" class="carto-overlay" id="carto-overlay">
+
+            </div>
+
+            <!-- Toggle Button -->
+            <div class="carto-controls">
+                <button class="carto-toggle-btn" id="carto-toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="carto-btn-icon"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    <span id="carto-btn-label">Abrir Mapa Histórico</span>
+                </button>
+                <p class="carto-hint-text">Haz clic para superponer el mapa histórico sobre la cartografía base</p>
+            </div>
+
+        </div>
+
+        <!-- Info Cards -->
+        <div class="carto-info-grid animate-on-scroll">
+            <div class="carto-info-card premium-img-effect">
+                <div class="carto-info-icon">🗺️</div>
+                <h3>Mapa Base</h3>
+                <p>Representación geográfica del territorio palenquero tal como existe hoy, con sus caminos, ríos y límites actuales.</p>
+            </div>
+            <div class="carto-info-card premium-img-effect">
+                <div class="carto-info-icon">📜</div>
+                <h3>Superposición Histórica</h3>
+                <p>Capa de pergamino con el trazado cartográfico original, revelando cómo los primeros pobladores entendían y habitaban su territorio.</p>
+            </div>
+            <div class="carto-info-card premium-img-effect">
+                <div class="carto-info-icon">🔍</div>
+                <h3>Calco Interactivo</h3>
+                <p>Al superponer ambos mapas puedes comparar la percepción histórica del espacio con la realidad geográfica contemporánea.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">← Volver al Portal</a>
+    </main>
+
+    <script>
+        const overlay = document.getElementById('carto-overlay');
+        const btn = document.getElementById('carto-toggle-btn');
+        const btnLabel = document.getElementById('carto-btn-label');
+        const legendDot = document.getElementById('overlay-legend-dot');
+        const legendText = document.getElementById('overlay-legend-text');
+
+        let isOpen = false;
+
+        function toggleOverlay() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                overlay.classList.add('visible');
+                btn.classList.add('active');
+                btnLabel.textContent = 'Cerrar Mapa Histórico';
+                legendDot.classList.add('active');
+                legendText.textContent = 'Superposición: Visible';
+            } else {
+                overlay.classList.remove('visible');
+                btn.classList.remove('active');
+                btnLabel.textContent = 'Abrir Mapa Histórico';
+                legendDot.classList.remove('active');
+                legendText.textContent = 'Superposición: Oculta';
+            }
+        }
+
+        btn.addEventListener('click', toggleOverlay);
+    </script>
+
+</body>
+
+</html>

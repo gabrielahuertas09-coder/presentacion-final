@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial - ECOS DE PALENQUE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ── MURAL CAROUSEL ─────────────────────────────── */
+        .mural-collection-section {
+            padding: 2rem 5% 1rem;
+        }
+
+        .mural-carousel-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .mural-carousel-viewport {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .mural-carousel-track {
+            display: flex;
+            gap: 16px;
+            transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform;
+        }
+
+        .mural-card-flat {
+            flex: 0 0 calc(33.333% - 12px);
+            aspect-ratio: 4 / 3;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .mural-card-flat:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        .mural-card-flat img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            pointer-events: none;
+        }
+
+        .mural-nav-btn {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(29, 35, 25,0.85);
+            border: 2px solid #FCC940;
+            color: #FCC940;
+            font-size: 1.4rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s, transform 0.2s;
+            z-index: 5;
+        }
+
+        .mural-nav-btn:hover {
+            background: #FCC940;
+            color: #1D2319;
+            transform: scale(1.1);
+        }
+
+        .mural-nav-left::before  { content: '\2039'; line-height: 1; }
+        .mural-nav-right::before { content: '\203A'; line-height: 1; }
+
+        @media (max-width: 700px) {
+            .mural-card-flat { flex: 0 0 calc(100% - 0px); }
+        }
+        @media (min-width: 701px) and (max-width: 1000px) {
+            .mural-card-flat { flex: 0 0 calc(50% - 8px); }
+        }
+    </style>
+</head>
+
+<body class="editorial-body">
+    <div class="editorial-layout-bg"></div>
+    <!-- PANEL LATERAL (VENTANA AZUL) -->
+    <div class="panel" id="panel">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
+                <li><a href="editorial.html">EDITORIAL</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li><a href="actividades.html">ACTIVIDADES</a></li>
+                <li><a href="explora.html">EXPLORAR</a></li>
+                <li><a href="cartografia.html">CARTOGRAFÍA</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header-principal subpage-header">
+        <div class="header-brand">
+            <a href="index.html" class="ecos-palenque" style="text-decoration: none;">
+                <img src="imagenes/logo editorial JENDERISUTO en blanco.png" alt="Logo Editorial Jenderisuto" style="height: 55px; width: auto; vertical-align: middle;">
+            </a>
+        </div>
+        <div class="header-right-side">
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="historia.html">HISTORIA</a></li>
+                    <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                    <li><a href="musica.html">MÚSICA</a></li>
+                    <li><a href="editorial.html">EDITORIAL</a></li>
+                    <li><a href="galeria.html">GALERÍA</a></li>
+                </ul>
+            </nav>
+            <!-- BOTÓN HAMBURGUESA INTEGRADO -->
+            <div id="btnMenu" class="hamburguesa-header">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main class="editorial-main-wrapper">
+        <div class="editorial-header-redesign">
+            <h1>PUBLICACIONES EDITORIALES</h1>
+        </div>
+
+        <section class="feature-publicants">
+            <div class="bento-publications">
+                <a href="flepbook/index.html" class="pub-card-large" target="_blank" style="text-decoration: none;">
+                    <div class="pub-large-img">
+                        <img src="flepbook/pages/1.png" alt="Palenque Book" class="premium-img-effect">
+                    </div>
+                    <div class="pub-large-content">
+                        <h3>ECOS DE PALENQUE</h3>
+                        <p>Una inmersión profunda en la lírica y el arte palenquero. Un recorrido visual y poético por
+                            la primera comunidad libre de América. Explora el legado escrito y pictórico.</p>
+                        <span class="btn-visualizar">Visualizar</span>
+                    </div>
+                </a>
+
+                <div class="pub-card-small">
+                    <div class="pub-small-img premium-img-effect"><img src="murales/2.jpg" alt="Mural 2"></div>
+                    <div class="pub-small-content">
+                        <h4>Sabores Ancestrales</h4>
+                        <p>Documentando paredes que hablan de nuestra historia viva.</p>
+                    </div>
+                </div>
+
+                <div class="pub-card-small">
+                    <div class="pub-small-img"><img src="murales/3.jpg" alt="Mural 3"></div>
+                    <div class="pub-small-content">
+                        <h4>Voces de Libertad</h4>
+                        <p>Narrativas gráficas del primer pueblo libre de América.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Mural Collection (Flat Carousel) -->
+        <section class="mural-collection-section">
+            <h2 class="section-title-bento"
+                style="text-align: center; font-style: normal; font-family: 'time new roman'; font-weight: 600; margin-bottom: 3rem;">
+                Colección de Murales</h2>
+
+            <div class="mural-carousel-wrapper">
+                <button id="mural-flat-prev" class="mural-nav-btn mural-nav-left"></button>
+                <div class="mural-carousel-viewport">
+                    <div class="mural-carousel-track" id="mural-flat-track">
+                        <div class="mural-card-flat">
+                            <img src="murales/1.jpg" alt="Mural 1">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/2.jpg" alt="Mural 2">
+
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/3.jpg" alt="Mural 3">
+
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/4.jpg" alt="Mural 4">
+
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/5.jpg" alt="Mural 5">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/6.jpg" alt="Mural 6">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/7.jpg" alt="Mural 7">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/8.jpg" alt="Mural 8">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/9.jpg" alt="Mural 9">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/10.JPG" alt="Mural 10">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/11.jpg" alt="Mural 11">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/12.jpg" alt="Mural 12">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/13.jpg" alt="Mural 13">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/14.jpg" alt="Mural 14">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/15.jpg" alt="Mural 15">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/16.jpg" alt="Mural 16">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/17.jpg" alt="Mural 17">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/18.jpg" alt="Mural 18">
+                        </div>
+                        <div class="mural-card-flat">
+                            <img src="murales/19.jpg" alt="Mural 19">
+                        </div>
+                    </div>
+                </div>
+                <button id="mural-flat-next" class="mural-nav-btn mural-nav-right"></button>
+            </div>
+            <div style="text-align: center; color: #CA6702; margin-bottom: 5rem; font-weight: bold;">―</div>
+        </section>
+
+
+        <!-- 3. Purchase Order Section -->
+        <section class="editorial-order-section">
+            <div class="editorial-order-card">
+                <div class="editorial-order-img">
+                    <img src="murales/libro.png" alt="Libro Ecos de Palenque" class="premium-img-effect">
+                </div>
+                <div class="editorial-order-form">
+                    <h2 class="editorial-order-title">Haz tu Pedido</h2>
+                    <p class="editorial-order-subtitle">Recibe tu ejemplar en casa. <br>Contáctanos directamente por
+                        WhatsApp.</p>
+                    <form id="purchase-form" class="purchase-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="buyer-name">Nombre</label>
+                                <input type="text" id="buyer-name" placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="buyer-email">Email</label>
+                                <input type="email" id="buyer-email" placeholder="tu@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="buyer-phone">WhatsApp / Teléfono</label>
+                                <input type="tel" id="buyer-phone" placeholder="Tu número" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="buyer-number">Cantidad</label>
+                                <input type="number" id="buyer-number" value="1" min="1" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-select">Publicación</label>
+                            <select id="book-select" required>
+                                <option value="Ecos de Palenque">Ecos de Palenque</option>
+                                <option value="Sabores Ancestrales">Sabores Ancestrales</option>
+                                <option value="Voces de Libertad">Voces de Libertad</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-whatsapp">
+                            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="white"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            Pedir por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <a href="index.html" class="back-link">← VOLVER AL INICIO</a>
+    </main>
+
+    <script src="javascript.js"></script>
+    <script>
+        (function () {
+            const track = document.getElementById('mural-flat-track');
+            const prevBtn = document.getElementById('mural-flat-prev');
+            const nextBtn = document.getElementById('mural-flat-next');
+            if (!track || !prevBtn || !nextBtn) return;
+
+            const cards = track.querySelectorAll('.mural-card-flat');
+            const totalCards = cards.length;
+
+            // Determine how many cards are visible at once based on viewport
+            function visibleCount() {
+                const w = window.innerWidth;
+                if (w <= 700) return 1;
+                if (w <= 1000) return 2;
+                return 3;
+            }
+
+            let current = 0;
+
+            function getCardWidth() {
+                if (!cards[0]) return 0;
+                const style = getComputedStyle(track);
+                const gap = parseFloat(style.gap) || 16;
+                return cards[0].getBoundingClientRect().width + gap;
+            }
+
+            function update() {
+                const maxIndex = totalCards - visibleCount();
+                current = Math.max(0, Math.min(current, maxIndex));
+                track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+                prevBtn.style.opacity = current === 0 ? '0.3' : '1';
+                nextBtn.style.opacity = current >= maxIndex ? '0.3' : '1';
+            }
+
+            prevBtn.addEventListener('click', () => { current--; update(); });
+            nextBtn.addEventListener('click', () => { current++; update(); });
+            window.addEventListener('resize', update);
+
+            update();
+        })();
+    </script>
+</body>
+
+</html>
